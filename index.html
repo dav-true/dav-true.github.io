@@ -284,9 +284,9 @@
 
                             <div id="cities" class="targeter" data-check="false">
                                 <p class="targeter">All cities</p>
-                                <p id="cities-arrow" class="targeter" style="top:1px; margin-left: 20px;">⤵</p>
+                                <p id="cities-arrow" class="targeter" style="top:1px; margin-left: 20px; margin-right: 10px;">⤵</p>
                             </div class="targeter">
-                            <div class="targeter" id="cities-options-div">
+                            <div class="targeter" data-opened="false" id="cities-options-div">
                                 <city-option class="targeter" v-for="city in cities" :city="city" />
                                 <!-- <div v-for="city in cities" :key="city.name">{{city.name}}</div> -->
                             </div>
@@ -294,22 +294,25 @@
                     </div>
                     <div id='cinema-class-choose-div'>
                         <div><span>Cinema class</span></div>
-                        <div class='cinema-class-tag'><span>LUX</span></div>
-                        <div class='cinema-class-tag'><span>VIP</span></div>
-                        <div class='cinema-class-tag'><span>Places for invalid people</span></div>
+                        <div class='cinema-class-tag' data-checked="false"><span>LUX</span></div>
+                        <div class='cinema-class-tag' data-checked="false"><span>VIP</span></div>
+                        <div class='cinema-class-tag' data-checked="false"><span>Places for invalid people</span></div>
                     </div>
                     <div id='cinema-technology-choose-div'>
                         <div><span>Technologies</span></div>
-                        <div class='cinema-class-tag'><span>ScreenX</span></div>
-                        <div class='cinema-class-tag'><span>LASER</span></div>
-                        <div class='cinema-class-tag'><span>IMAX</span></div>
-                        <div class='cinema-class-tag'><span>3D</span></div>
+                        <div class='cinema-class-tag' data-checked="false"><span>ScreenX</span></div>
+                        <div class='cinema-class-tag' data-checked="false"><span>LASER</span></div>
+                        <div class='cinema-class-tag' data-checked="false"><span>IMAX</span></div>
+                        <div class='cinema-class-tag' data-checked="false"><span>3D</span></div>
                     </div>
                 </div>
             </div>
 
             <div id="cinema-list">
                 <cinema class="cinema" v-for="cinema in cinemas" :cinema="cinema"></cinema>
+                <div id='test' style='display:none; width: 40%; font-size: 30px;
+                text-align: center;
+                 margin-left: auto; margin-right: auto; margin-top: 20px; margin-bottom: 20px;'>There's no a cinema with your parameters</div>
             </div>
 
         </div>
