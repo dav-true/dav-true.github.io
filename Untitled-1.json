@@ -1,0 +1,16 @@
+{
+    "movies": [
+      { "id": 0, "title": "Alien", "url" : "https://www.youtube.com/embed/svnAD0TApb8", "year": "2017", "country":"USA", "age" : "18+", "time":"122 min", "director" : "Ridley Scott", "genre":"Horror | Thriller", "actors":"Michael Fassbender, Katherine Waterston, Billy Crudup, ...", "description" : "The crew of a colony ship, bound for a remote planet, discover an uncharted paradise with a threat beyond their imagination, and must attempt a harrowing escape."},
+      { "id": 1, "title": "Blackkklansman", "url" : "https://www.youtube.com/embed/fQNZhs0QKq0", "year": "2018", "country":"USA" , "age" : "18+", "time":"135 min", "director" : "Spike Lee", "genre":"Biography | Crime ", "actors":" John David Washington, Adam Driver, Laura Harrier","description" : "Ron Stallworth, an African American police officer from Colorado Springs, CO, successfully manages to infiltrate the local Ku Klux Klan branch with the help of a Jewish surrogate who eventually becomes its leader. Based on actual events." },
+      { "id": 2, "title": "Mother", "url": "https://www.youtube.com/embed/XpICoc65uh0", "year": "", "age" : "", "time":"", "director" : "", "genre":"", "description": "Best film ever" },
+      { "id": 3, "title": "Suspiria", "url": "https://www.youtube.com/embed/BY6QKRl56Ok", "year": "", "age" : "", "time":"", "director" : "", "genre":"",  "description": ""},
+      { "id": 4, "title": "Spiderman", "url": "https://www.youtube.com/embed/g4Hbz2jLxvQ","year": "", "age" : "", "time":"", "director" : "", "genre":"", "description": ""},
+      { "id": 5, "title": "First Reformed", "url": "https://www.youtube.com/embed/hCF5Y8dQpR4", "year": "", "age" : "", "time":"", "director" : "", "genre":"", "description": ""},
+      { "id": 6, "title": "La La Land", "url": "https://www.youtube.com/embed/0pdqf4P9MB8", "year": "", "age" : "", "time":"", "director" : "", "genre":"", "description": ""},
+      { "id": 7, "title": "Ready Player One", "url": "https://www.youtube.com/embed/cSp1dM2Vj48", "year": "", "age" : "", "time":"", "director" : "", "genre":"", "description": ""},
+      { "id": 8, "title": "Moonlight", "url": "https://www.youtube.com/embed/9NJj12tJzqc", "year": "", "age" : "", "time":"", "director" : "", "genre":"", "description": ""},
+      { "id": 9, "title": "Mary Poppins Returns", "url": "https://www.youtube.com/embed/-3jsfXDZLIY", "year": "", "age" : "", "time":"", "director" : "", "genre":"", "description": ""},
+      { "id": 10, "title": "Blade Runner 2049", "url": "https://www.youtube.com/embed/gCcx85zbxz4", "year": "", "age" : "", "time":"", "director" : "", "genre":"", "description": ""}
+    ]
+  }
+  
