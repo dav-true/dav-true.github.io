@@ -2,7 +2,7 @@
 
 $('document').ready(function () {
 
-
+    $('#body').show();
     async function vue() {
         const dt = await loadData();
         let cities = dt.cities;
@@ -47,15 +47,62 @@ $('document').ready(function () {
 
         })
 
+     
+        function fadeInLeft () { 
+            var el     = $('#cinema-list'),  
+            newone = el.clone(true);
+                  
+            el.before(newone);
+               
+            $("." + el.attr("class") + ":last").remove();
+
+        }
+        
+        var temp = [];
+    
+
 
         $('.city').click (function () {
-            
+            fadeInLeft();
+            temp = [];
+            $('.cinema-class-tag').attr('data-checked','false').css( {'background-color' : "#dedede", 'color': "black", "border-color": "black" });
+            $('#no-cinema-label').css('display', 'none');
+            var city = $(this).text();
+            $('#city-lable').text(city);
+            if(city == "All cities") { 
+                $('.cinema').addClass('checked');
+                $('.cinema').removeClass('unchecked');
+                $('.cinema').addClass('show');
+                $('.cinema').removeClass('unshow');
+                
+            }
+            else {
+
+                for(i = 0; i < $('.cinema').length; i++) {
+                    var c = $('.cinema').eq(i).contents().find('span').text();
+                    if(c == city) {
+                        $('.cinema').eq(i).addClass('checked');
+                        $('.cinema').eq(i).removeClass('unchecked')
+                        $('.cinema').eq(i).addClass('show');
+                        $('.cinema').eq(i).removeClass('unshow')
+                       
+                    } else {
+                        $('.cinema').eq(i).removeClass('checked')
+                        $('.cinema').eq(i).addClass('unchecked');
+                        $('.cinema').eq(i).removeClass('show')
+                        $('.cinema').eq(i).addClass('unshow');
+                        
+
+                    }
+                }
+            }
         })
 
-
-        var temp = [];
+      
 
         $('.cinema-class-tag').click(function () {
+            
+            fadeInLeft();
 
             if($(this).attr('data-checked') ==  'false') {
                 $(this).css('background-color', "yellowgreen");
@@ -73,7 +120,7 @@ $('document').ready(function () {
 
             if (temp.length == 0) {
                 temp.push(clicked);
-                console.log(temp);
+                
             } else {
                 var temp_counter = 0;
                 for (n = 0; n < temp.length; n++) {
@@ -84,23 +131,23 @@ $('document').ready(function () {
 
                 if (temp_counter == 0) {
                     temp.push(clicked);
-                    console.log(temp)
+                    
                 } else {
                     const index = temp.indexOf(clicked)
                     if (index > -1) {
                         temp.splice(index, 1)
                     }
 
-                    console.log(temp)
+                    
                 }
             }
 
 
 
             var cinema_counter = 0; 
-            for (i = 0; i < $('.cinema').length; i++) {
+            for (i = 0; i < $('.checked').length; i++) {
                 if (temp.length > 0) {
-                    var c = $('.cinema').eq(i).contents().find('.tags');  /////////All tags in line
+                    var c = $('.checked').eq(i).contents().find('.tags');  /////////All tags in line
                     var counter = 0;
                     for (k = 0; k < c.length; k++) {
                         for (l = 0; l < temp.length; l++) {
@@ -113,22 +160,29 @@ $('document').ready(function () {
 
                     if (counter < temp.length) {
                         cinema_counter++;
-                        $('.cinema').eq(i).css('display', 'none')
+                        $('.checked').eq(i).addClass('unshow')
+                        $('.checked').eq(i).removeClass('show')
                     } else if (counter >= temp.length) {
-                        $('.cinema').eq(i).css('display', 'flex')
+                        $('.checked').eq(i).addClass('show')
+                        $('.checked').eq(i).removeClass('unshow')
+                      
+                       
                     }
                     
                 } else if (temp.length == 0) {
                     for (i = 0; i < $('.cinema').length; i++) {
-                        $('.cinema').eq(i).css('display', 'flex')
+                        $('.checked').eq(i).addClass('show')
+                        $('.checked').eq(i).removeClass('unshow')
+                        
+                        
                     }
                 }
             } 
 
-            if(cinema_counter == $(".cinema").length) {
-                $('#test').css("display", "block")
+            if(cinema_counter == $(".checked").length) {
+                $('#no-cinema-label').css("display", "block")
             } else {
-                $('#test').css("display", "none")
+                $('#no-cinema-label').css("display", "none")
             }
         })
 
@@ -241,8 +295,11 @@ $('document').ready(function () {
 
     window.onclick = function (event) {  ///////////////////////////// Modal div closing by clicking ourside the block
         if (event.target == modal) {
-            modal.style.opacity = "0";
-            modal.style.display = "none";
+            $('.modal-div').fadeTo(400, 0).delay(400).queue(function (next) { 
+                $(this).css('display', 'none'); 
+                next(); 
+              });
+          
 
             let target = $('#trailer-iframe');
 
@@ -327,6 +384,8 @@ $('document').ready(function () {
         $('.modal-div').fadeTo(400, 1)
 
     })
+
+   
 
 
     $("#cities").click(() => {                  ///////////////////////////// Cities drop down list animationW

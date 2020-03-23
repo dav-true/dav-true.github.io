@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +27,7 @@
                         <li class="targeter_2"><a href="#" class="nav-butt-drop targeter_2">About Us</a></li>
                         <li class="targeter_2"><a href="#" class="nav-butt-drop targeter_2">Contacts</a></li>
                     </ul>
-                    <ul class="targeter_2" style="list-style: none; display: flex; width:78%; margin-left: auto; margin-right: auto;">
+                    <ul class="targeter_2" style="list-style: none; display: flex; width:78%; margin-left: auto; margin-right: auto; margin-top: 20px;">
                         <li class="targeter_2"><a class="targeter_2" href="#">
                                 <div class='social-media telegram targeter_2'></div>
                             </a></li>
@@ -39,6 +38,11 @@
                                 <div class='social-media whatsapp targeter_2' ></div>
                             </a></li>
                     </ul>
+
+                    <div class="footer-contacts" style="margin-top: 20px;"> 
+                        <p>+38 093 234 8921</p>
+                        <p>info@kinoland.com</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -133,6 +137,9 @@
         <div class="modal-div" id="modal-div">
             <div class="modal-content" id="modal-content">
                 <div class="iframe-div">
+                    <div id="close-modal-butt" style="right: 0;width: 24px;opacity: 0.5;z-index: 2;height: 24px;
+                    position: fixed;background-image: url(img/close.webp);background-size: cover;top: 0;"></div>
+
                     <iframe id="trailer-iframe" src="" frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
@@ -140,7 +147,7 @@
                     <div id="movie-info">
                         <h3 id="modal-movie-title"></h3>
 
-                        <div style="padding: 10px 30px 0 30px;">
+                        <div>
                             <table>
                                 <tr>
                                     <td class="movie-props">Year</td>
@@ -283,11 +290,12 @@
                             <label for="cities" class="targeter">Choose your city:</label>
 
                             <div id="cities" class="targeter" data-check="false">
-                                <p class="targeter">All cities</p>
-                                <p id="cities-arrow" class="targeter" style="top:1px; margin-left: 20px; margin-right: 10px;">⤵</p>
+                                <p class="targeter" id="city-lable" style='margin-left: auto;'>All cities</p>
+                                <p id="cities-arrow" class="targeter" style="top:1px; margin-right: 10px; margin-left: auto;
+                                margin-right: 10px;">⤵</p>
                             </div class="targeter">
                             <div class="targeter" data-opened="false" id="cities-options-div">
-                                <city-option class="targeter" v-for="city in cities" :city="city" />
+                                <city-option  v-for="city in cities" :city="city" />
                                 <!-- <div v-for="city in cities" :key="city.name">{{city.name}}</div> -->
                             </div>
                         </div>
@@ -308,11 +316,11 @@
                 </div>
             </div>
 
-            <div id="cinema-list">
-                <cinema class="cinema" v-for="cinema in cinemas" :cinema="cinema"></cinema>
-                <div id='test' style='display:none; width: 40%; font-size: 30px;
+            <div id="cinema-list" class="fadeInLeft">
+                <cinema class="cinema checked show" v-for="cinema in cinemas" :cinema="cinema"></cinema>
+                <div id='no-cinema-label' style='display:none; width: 40%; font-size: 30px;
                 text-align: center;
-                 margin-left: auto; margin-right: auto; margin-top: 20px; margin-bottom: 20px;'>There's no a cinema with your parameters</div>
+                 margin-left: auto; margin-right: auto; margin-top: 80px; margin-bottom: 80px;'>There's no a cinema with your parameters</div>
             </div>
 
         </div>
@@ -324,9 +332,31 @@
     </main>
 
     <footer>
-        <div id="foooter-div">
-            <p>© 2020 Kinoland. All right are protected
+        <div id="footer-div">
+            <p style="top: 10px;">© 2020 Kinoland. All rights are protected
             </p>
+        </div>
+
+       
+
+        <div class="footer-info">
+
+            <div class="footer-contacts"> 
+                <p>+38 093 234 8921</p>
+                <p>info@kinoland.com</p>
+            </div>
+
+            <ul style="list-style: none; display: flex; width:100%; margin-left: auto; margin-right: auto;margin-top: 10px;">
+                <li><a href="#">
+                        <div class='social-media telegram'></div>
+                    </a></li>
+                <li><a href="#">
+                        <div class='social-media instagram'></div>
+                    </a></li>
+                <li><a href="#">
+                        <div class='social-media whatsapp' ></div>
+                    </a></li>
+            </ul>
         </div>
     </footer>
 
