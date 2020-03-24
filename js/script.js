@@ -8,12 +8,10 @@ $('document').ready(function () {
         let cities = dt.cities;
         let cinemas = dt.cinemas;
 
-
         Vue.component("city-option", {
             props: { city: Object },
             template: `<div class="city">{{city.name}}</div>`
         })
-
 
         new Vue({
             el: "#city-choose-div",
@@ -61,7 +59,41 @@ $('document').ready(function () {
         var temp = [];
     
 
+        $('.mark').click (function () {
+            fadeInLeft();
+            temp = [];
+            $('.cinema-class-tag').attr('data-checked','false').css( {'background-color' : "#dedede", 'color': "black", "border-color": "black" });
+            $('#no-cinema-label').css('display', 'none');
+            var city = $(this).attr('data-city');
+            console.log(city)
+            $('#city-lable').text(city);
+            
+            for(i = 0; i < $('.cinema').length; i++) {
+                var c = $('.cinema').eq(i).contents().find('span').text();
+                if(c == city) {
+                    $('.cinema').eq(i).addClass('checked');
+                    $('.cinema').eq(i).removeClass('unchecked')
+                    $('.cinema').eq(i).addClass('show');
+                    $('.cinema').eq(i).removeClass('unshow')
+                       
+                } else {
+                    $('.cinema').eq(i).removeClass('checked')
+                    $('.cinema').eq(i).addClass('unchecked');
+                    $('.cinema').eq(i).removeClass('show')
+                    $('.cinema').eq(i).addClass('unshow');            
+                }
+            }
+            $('html, body').stop().animate({
+                        scrollTop: $('#cinema-list').offset().top
+                    }, 400)
+            
+        })
 
+        
+        
+        
+        
+        
         $('.city').click (function () {
             fadeInLeft();
             temp = [];
@@ -95,7 +127,8 @@ $('document').ready(function () {
 
                     }
                 }
-            }
+            } 
+
         })
 
       
@@ -211,20 +244,20 @@ $('document').ready(function () {
     }
 
 
-    function slideToCinema (data) {
-        var data = '.' + data;
+    // function slideToCinema (data) {
+    //     var data = '.' + data;
 
 
-        $('html, body').stop().animate({
-            scrollTop: $(data).offset().top
-        }, 400)
+    //     $('html, body').stop().animate({
+    //         scrollTop: $(data).offset().top
+    //     }, 400)
 
-    }
+    // }
     
-    $('.mark').click (function ( ) {
-        var i = $('.mark').index(this)
-        slideToCinema($('.mark').eq(i).attr('data-city'))
-    })
+    // $('.mark').click (function ( ) {
+    //     var i = $('.mark').index(this)
+    //     slideToCinema($('.mark').eq(i).attr('data-city'))
+    // })
 
     function slideToBlock(i) {
         var i = i;
@@ -251,7 +284,7 @@ $('document').ready(function () {
     }
 
 
-    $('.nav-butt').click(function () {         ////////////////////// Animation of moving to dif pages blocks
+    $('.nav-butt').click(function () {         ////////////////////// Animation of moving to different pages blocks
         slideToBlock($(".nav-butt").index(this));
     })
     $('.nav-butt-drop').click(function () {         ////////////////////// Animation of moving to dif pages blocks
@@ -426,9 +459,9 @@ $('document').ready(function () {
 
 
     $('.close-butt').click(function () {
-
         $('.dropped-menu').css('animation', 'fadeOutRight 0.4s forwards');
     })
+
 
     $('.menu-butt').click(function () {
         $('.dropped-menu').css('display', 'block');
