@@ -22,7 +22,7 @@ $('document').ready(function () {
 
         Vue.component("cinema", {
             props: { cinema: Object },
-            template: ` <div class='cinema-block'>
+            template: ` <div class='cinema-block' :class="cinema.city">
                             <div class='cinema-photo-div' v-bind:style="{ backgroundImage: 'url(' + cinema.photo + ')' }"></div>
                             <div class='cinema-info-div'>
                                 <div>
@@ -211,7 +211,22 @@ $('document').ready(function () {
     }
 
 
-    function slideToElement(i) {
+    function slideToCinema (data) {
+        var data = '.' + data;
+
+
+        $('html, body').stop().animate({
+            scrollTop: $(data).offset().top
+        }, 400)
+
+    }
+    
+    $('.mark').click (function ( ) {
+        var i = $('.mark').index(this)
+        slideToCinema($('.mark').eq(i).attr('data-city'))
+    })
+
+    function slideToBlock(i) {
         var i = i;
         var target;
         var time;
@@ -222,7 +237,7 @@ $('document').ready(function () {
             time = 400;
         } else if (i == 1) {
             target = "#cinemas"
-            time = 800;
+            time = 600;
         } else if (i == 2) {
             target = "#about-us"
         } else if (i == 3) {
@@ -237,10 +252,10 @@ $('document').ready(function () {
 
 
     $('.nav-butt').click(function () {         ////////////////////// Animation of moving to dif pages blocks
-        slideToElement($(".nav-butt").index(this));
+        slideToBlock($(".nav-butt").index(this));
     })
     $('.nav-butt-drop').click(function () {         ////////////////////// Animation of moving to dif pages blocks
-        slideToElement($(".nav-butt-drop").index(this));
+        slideToBlock($(".nav-butt-drop").index(this));
     })
 
 
@@ -291,6 +306,12 @@ $('document').ready(function () {
         $('.mark::after').eq(i).fadeTo(300, 0)
     })
 
+    $('#close-modal-butt').click (() => {
+        $('.modal-div').fadeTo(400, 0).delay(400).queue(function (next) { 
+            $(this).css('display', 'none'); 
+            next(); 
+          });
+    })
 
 
     window.onclick = function (event) {  ///////////////////////////// Modal div closing by clicking ourside the block

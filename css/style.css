@@ -93,6 +93,7 @@ td {
 
 .menu-butt {
   width: 64px;
+  z-index: 5;
   height: 64px;
   background-image: url(../img/menu.png);
   background-repeat: no-repeat;
@@ -353,6 +354,7 @@ td {
   background-size: cover;
   width: 60px;
   height: 60px;
+  cursor: pointer;
   z-index: 2; }
 
 .mark:hover::after {
@@ -510,9 +512,16 @@ td {
 #movie-info > div {
   padding: 10px 20px 0 20px; }
 
+#close-modal-butt {
+  cursor: pointer;
+  display: none; }
+
 @media (max-width: 800px) {
   #description-div {
     display: none; }
+
+  #close-modal-butt {
+    display: block; }
 
   .modal-content {
     width: 87%;
