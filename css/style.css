@@ -113,7 +113,7 @@ td {
   animation: fadeInDown 1s;
   margin-left: auto;
   margin-right: auto;
-  width: 600px;
+  width: 440px;
   text-align: center; }
 
 .dropped-menu {
@@ -320,6 +320,8 @@ td {
 
 .map-wrap {
   margin-top: 20px;
+  background-position: center;
+  background-size: cover;
   background-image: url(../img/background.jpg); }
 
 .map-div {
@@ -672,6 +674,7 @@ td {
   width: 100%;
   height: 500px;
   background-size: cover;
+  background-position: center;
   background-image: url(../img/background.jpg); }
 
 .about-us-div {
