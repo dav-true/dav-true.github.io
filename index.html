@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +28,8 @@
                         <li class="targeter_2"><a href="#" class="nav-butt-drop targeter_2">About Us</a></li>
                         <li class="targeter_2"><a href="#" class="nav-butt-drop targeter_2">Contacts</a></li>
                     </ul>
-                    <ul class="targeter_2" style="list-style: none; display: flex; width:78%; margin-left: auto; margin-right: auto; margin-top: 20px;">
+                    <ul class="targeter_2"
+                        style="list-style: none; display: flex; width:78%; margin-left: auto; margin-right: auto; margin-top: 20px;">
                         <li class="targeter_2"><a class="targeter_2" href="#">
                                 <div class='social-media telegram targeter_2'></div>
                             </a></li>
@@ -35,11 +37,11 @@
                                 <div class='social-media instagram targeter_2'></div>
                             </a></li>
                         <li class="targeter_2"><a href="#">
-                                <div class='social-media whatsapp targeter_2' ></div>
+                                <div class='social-media whatsapp targeter_2'></div>
                             </a></li>
                     </ul>
 
-                    <div class="footer-contacts" style="margin-top: 20px;"> 
+                    <div class="footer-contacts" style="margin-top: 20px;">
                         <p>+38 093 234 8921</p>
                         <p>info@kinoland.com</p>
                     </div>
@@ -52,12 +54,12 @@
     <main>
         <div class='nav-wrap'>
             <ul class="nav-bar">
-                <li><a href="#movies" class="nav-butt">Movies</a></li>
-                <li><a href="#cinemas" class="nav-butt">Cinemas</a></li>
+                <li><a href="#" class="nav-butt">Movies</a></li>
+                <li><a href="#" class="nav-butt">Cinemas</a></li>
                 <li><a href="#" class="nav-butt">About Us</a></li>
                 <li><a href="#" class="nav-butt">Contacts</a></li>
             </ul>
-            
+
         </div>
 
         <div>
@@ -287,15 +289,15 @@
                 <div class="cinema-filter-div">
                     <div id="city-choose-div">
                         <div>
-                            <label for="cities" class="targeter">Choose your city:</label>
+                            <label for="cities" >Choose your city:</label>
 
                             <div id="cities" class="targeter" data-check="false">
                                 <p class="targeter" id="city-lable" style='margin-left: auto;'>All cities</p>
                                 <p id="cities-arrow" class="targeter" style="top:1px; margin-right: 10px; margin-left: auto;
                                 margin-right: 10px;">⤵</p>
-                            </div class="targeter">
+                            </div>
                             <div class="targeter" data-opened="false" id="cities-options-div">
-                                <city-option  v-for="city in cities" :city="city" />
+                                <city-option v-for="city in cities" :city="city" />
                                 <!-- <div v-for="city in cities" :key="city.name">{{city.name}}</div> -->
                             </div>
                         </div>
@@ -315,18 +317,35 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div id="cinema-list" class="fadeInLeft">
-                <cinema class="cinema checked show" v-for="cinema in cinemas" :cinema="cinema"></cinema>
-                <div id='no-cinema-label' style='display:none; width: 40%; font-size: 30px;
+        <div id="cinema-list" class="fadeInLeft">
+            <cinema class="cinema checked show" v-for="cinema in cinemas" :cinema="cinema"></cinema>
+            <div id='no-cinema-label' style='display:none; width: 40%; font-size: 30px;
                 text-align: center;
-                 margin-left: auto; margin-right: auto; margin-top: 80px; margin-bottom: 80px;'>There's no a cinema with your parameters</div>
-            </div>
-
+                 margin-left: auto; margin-right: auto; margin-top: 80px; margin-bottom: 80px;'>There's no a cinema
+                with your parameters</div>
         </div>
 
+        <div>
+            <div id="about-us" class="title"><p>About Us</p></div>
         </div>
-
+        <div class="about-us-wrap">
+            <!-- <div class="about-us-div"> 
+                <p>KinoLand</p>
+                <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Atque voluptatibus delectus in, consequuntur reprehenderit distinctio illo eveniet quisquam accusantium 
+                dicta deserunt doloribus aut natus dolorem ea corrupti, assumenda cum cumque.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Atque voluptatibus delectus in, consequuntur reprehenderit distinctio illo eveniet quisquam accusantium 
+                    dicta deserunt doloribus aut natus dolorem ea corrupti, assumenda cum cumque.
+                    </p>
+            </div> -->
+            
+        </div>
 
 
     </main>
@@ -337,16 +356,17 @@
             </p>
         </div>
 
-       
+
 
         <div class="footer-info">
 
-            <div class="footer-contacts"> 
+            <div class="footer-contacts">
                 <p>+38 093 234 8921</p>
                 <p>info@kinoland.com</p>
             </div>
 
-            <ul style="list-style: none; display: flex; width:100%; margin-left: auto; margin-right: auto;margin-top: 10px;">
+            <ul
+                style="list-style: none; display: flex; width:100%; margin-left: auto; margin-right: auto;margin-top: 10px;">
                 <li><a href="#">
                         <div class='social-media telegram'></div>
                     </a></li>
@@ -354,7 +374,7 @@
                         <div class='social-media instagram'></div>
                     </a></li>
                 <li><a href="#">
-                        <div class='social-media whatsapp' ></div>
+                        <div class='social-media whatsapp'></div>
                     </a></li>
             </ul>
         </div>

@@ -273,6 +273,7 @@ $('document').ready(function () {
             time = 600;
         } else if (i == 2) {
             target = "#about-us"
+            time = 800;
         } else if (i == 3) {
             target = "#contacts"
         }
