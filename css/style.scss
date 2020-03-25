@@ -664,12 +664,19 @@ td {
   }
 }
 
-
+#lil-description-div {
+  display: none;
+}
 
 @media (max-width: 800px) {
   .arrows-div {
     display: flex;
   }
+
+  
+#lil-description-div {
+  display: block;
+}
 
   #description-div {
     display: none;

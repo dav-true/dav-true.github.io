@@ -334,11 +334,18 @@ $('document').ready(function () {
             $(this).css('display', 'none'); 
             next(); 
           });
+          $('body').css('overflow-y', 'scroll')
+          
+          let target = $('#trailer-iframe');
+
+          target.attr('src', '');
+        
     })
 
 
     window.onclick = function (event) {  ///////////////////////////// Modal div closing by clicking ourside the block
         if (event.target == modal) {
+            $('body').css('overflow-y', 'scroll')
             $('.modal-div').fadeTo(400, 0).delay(400).queue(function (next) { 
                 $(this).css('display', 'none'); 
                 next(); 
@@ -407,8 +414,10 @@ $('document').ready(function () {
     screenWidth();
 
     $('.centered').click(async function () {             //////////////////////// Poster name clicking function
+        
+        $('body').css('overflow-y', 'hidden')
+        
         var id = $(this).attr('data-jsonid');
-        console.log(id);
 
         var data = await loadData();
         let target = $('#trailer-iframe');
@@ -422,7 +431,7 @@ $('document').ready(function () {
         $('#movie-age').text(data.movies[id].age);
         $('#movie-time').text(data.movies[id].time);
         $('#movie-actors').text(data.movies[id].actors);
-        $('#description').text(data.movies[id].description);
+        $('.description').text(data.movies[id].description);
 
         $('.modal-div').css('display', 'block');
         $('.modal-div').fadeTo(400, 1)
