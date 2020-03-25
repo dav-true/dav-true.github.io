@@ -25,16 +25,16 @@ body {
   overflow-x: hidden; }
 
 .modal-div {
-  display: none;
   z-index: 10;
   position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
-  opacity: 0;
+  opacity: 1;
   background-color: rgba(0, 0, 0, 0.4); }
 
 .modal-content {
+  overflow-y: scroll;
   font-family: "Baloo Chettan 2", cursive;
   display: block;
   padding: 40px;
@@ -82,6 +82,11 @@ td {
   font-size: 25px;
   font-weight: 200;
   text-align: center; }
+
+.arrows-div {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  display: none; }
 
 .header-background {
   display: flex;
@@ -443,6 +448,7 @@ td {
   height: 200px; }
 
 #cities {
+  cursor: pointer;
   background-color: #79a71d;
   width: 118px;
   border-radius: 5px;
@@ -495,6 +501,7 @@ td {
   margin-right: auto; }
 
 .cinema-class-tag {
+  cursor: pointer;
   margin-top: 15px;
   text-align: center;
   background-color: #dedede;
@@ -524,7 +531,16 @@ td {
   cursor: pointer;
   display: none; }
 
+@media (max-width: 800px) and (min-height: 650px) {
+  .modal-content {
+    height: 650px; } }
+@media (max-width: 800px) and (max-height: 649px) {
+  .modal-content {
+    height: 91%; } }
 @media (max-width: 800px) {
+  .arrows-div {
+    display: flex; }
+
   #description-div {
     display: none; }
 
@@ -533,7 +549,6 @@ td {
 
   .modal-content {
     width: 87%;
-    height: 91%;
     padding: 0px;
     margin-top: 32px; }
 
@@ -611,6 +626,9 @@ td {
 
   .cinema-filter-div {
     width: 100%; } }
+.city {
+  cursor: pointer; }
+
 @media (max-width: 500px) {
   #city-choose-div > div {
     width: 100%; }

@@ -244,20 +244,9 @@ $('document').ready(function () {
     }
 
 
-    // function slideToCinema (data) {
-    //     var data = '.' + data;
-
-
-    //     $('html, body').stop().animate({
-    //         scrollTop: $(data).offset().top
-    //     }, 400)
-
-    // }
-    
-    // $('.mark').click (function ( ) {
-    //     var i = $('.mark').index(this)
-    //     slideToCinema($('.mark').eq(i).attr('data-city'))
-    // })
+    $(window).scroll(function () {
+      console.log(window.scrollY)  
+    })
 
     function slideToBlock(i) {
         var i = i;
