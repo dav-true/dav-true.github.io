@@ -150,36 +150,36 @@
                         <h3 id="modal-movie-title"></h3>
 
                         <div>
-                            <table>
+                            <table id="movie-info-table">
                                 <tr>
                                     <td class="movie-props">Year</td>
-                                    <td id="movie-year"></td>
+                                    <td class="movie-props" id="movie-year"></td>
                                 </tr>
                                 <tr>
                                     <td class="movie-props">Country</td>
-                                    <td id='movie-country'></td>
+                                    <td class="movie-props" id='movie-country'></td>
                                 </tr>
                                 <tr>
                                     <td class="movie-props">Director</td>
-                                    <td id='movie-director'></td>
+                                    <td class="movie-props" id='movie-director'></td>
                                 </tr>
 
                                 <tr>
                                     <td class="movie-props">Genre</td>
-                                    <td id='movie-genre'></td>
+                                    <td class="movie-props" id='movie-genre'></td>
                                 </tr>
 
                                 <tr>
                                     <td class="movie-props">Certificate</td>
-                                    <td id='movie-age'></td>
+                                    <td class="movie-props" id='movie-age'></td>
                                 </tr>
                                 <tr>
                                     <td class="movie-props">Runtime</td>
-                                    <td id='movie-time'></td>
+                                    <td class="movie-props" id='movie-time'></td>
                                 </tr>
                                 <tr>
                                     <td class="movie-props">Actors</td>
-                                    <td id='movie-actors'></td>
+                                    <td class="movie-props" id='movie-actors'></td>
                                 </tr>
 
 
@@ -191,12 +191,7 @@
                             <div class='description'></div>
 
                         </div>
-                        <!-- <div class='arrows-div'> 
-                            <div style="background-image: url(../img/back.png);
-                             background-size: cover; width: 24px; height: 24px; margin-left: 30%;"></div>
-                            <div style="background-image: url(../img/next.png); 
-                            background-size: cover; width: 24px; height: 24px; margin-left: auto; margin-right: 30%;"></div>
-                        </div> -->
+                    
                     </div>
 
                 </div>
@@ -342,6 +337,95 @@
                 text-align: center;
                  margin-left: auto; margin-right: auto; margin-top: 80px; margin-bottom: 80px;'>There's no a cinema
                 with your parameters</div>
+        </div>
+
+        <div class='schedule-wrap'>
+            <div class='schedule-content'>
+                <div style="display: flex; height: 100%;">
+                    <div class="calendar-wrap">
+                        <div style="width: 50px;margin-left: auto; margin-right: auto;"><p style="font-size: 22px;">2020</p></div>
+                        <div class="month-switch" > 
+                            <div id='cal-left-switcher'></div>
+                            <div style="width: 100px; margin-right: auto; margin-left: auto;"><p id='month-label' style="text-align: center; font-size: 19px;"></p></div>
+                            <div id="cal-right-switcher" ></div>
+                        </div>
+                       
+                        <div class="calendar-main" id="days-of-month">
+                            <table class="calendar-table" >
+                                <thead>
+                                    <tr style="width: 100%;">
+                                        <td class='day-of-week'>S</td>
+                                        <td class='day-of-week'>M</td>
+                                        <td class='day-of-week'>T</td>
+                                        <td class='day-of-week'>W</td>
+                                        <td class='day-of-week'>T</td>
+                                        <td class='day-of-week'>F</td>
+                                        <td class='day-of-week'>S</td>
+                                    </tr>
+                                </thead>
+                                <tbody style="margin-top: 20px;">
+                                  
+                                    <tr style="width: 100%;">
+                                        <td class='day-of-week-num sun'></td>
+                                        <td class='day-of-week-num mon'></td>
+                                        <td class='day-of-week-num tue'></td>
+                                        <td class='day-of-week-num wed'></td>
+                                        <td class='day-of-week-num thu'></td>
+                                        <td class='day-of-week-num fri'></td>
+                                        <td class='day-of-week-num sat'></td>
+                                    </tr>
+                                    <tr style="width: 100%;">
+                                        <td class='day-of-week-num sun'></td>
+                                        <td class='day-of-week-num mon'></td>
+                                        <td class='day-of-week-num tue'></td>
+                                        <td class='day-of-week-num wed'></td>
+                                        <td class='day-of-week-num thu'></td>
+                                        <td class='day-of-week-num fri'></td>
+                                        <td class='day-of-week-num sat'></td>
+                                    </tr>
+                                    <tr style="width: 100%;">
+                                        <td class='day-of-week-num sun'></td>
+                                        <td class='day-of-week-num mon'></td>
+                                        <td class='day-of-week-num tue'></td>
+                                        <td class='day-of-week-num wed'></td>
+                                        <td class='day-of-week-num thu'></td>
+                                        <td class='day-of-week-num fri'></td>
+                                        <td class='day-of-week-num sat'></td>
+                                    </tr>
+                                    <tr style="width: 100%;">
+                                        <td class='day-of-week-num sun'></td>
+                                        <td class='day-of-week-num mon'></td>
+                                        <td class='day-of-week-num tue'></td>
+                                        <td class='day-of-week-num wed'></td>
+                                        <td class='day-of-week-num thu'></td>
+                                        <td class='day-of-week-num fri'></td>
+                                        <td class='day-of-week-num sat'></td>
+                                    </tr>
+                                    <tr style="width: 100%;">
+                                        <td class='day-of-week-num sun'></td>
+                                        <td class='day-of-week-num mon'></td>
+                                        <td class='day-of-week-num tue'></td>
+                                        <td class='day-of-week-num wed'></td>
+                                        <td class='day-of-week-num thu'></td>
+                                        <td class='day-of-week-num fri'></td>
+                                        <td class='day-of-week-num sat'></td>
+                                    </tr>
+                                    <tr style="width: 100%;">
+                                        <td class='day-of-week-num sun'></td>
+                                        <td class='day-of-week-num mon'></td>
+                                        <td class='day-of-week-num tue'></td>
+                                        <td class='day-of-week-num wed'></td>
+                                        <td class='day-of-week-num thu'></td>
+                                        <td class='day-of-week-num fri'></td>
+                                        <td class='day-of-week-num sat'></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div style="width:400px; height: 100%; background-color: bisque; margin-right: auto; margin-left: auto;"></div>
+                </div>
+            </div>
         </div>
 
         <div>

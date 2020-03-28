@@ -2,7 +2,90 @@
 
 $('document').ready(function () {
 
-    $('#body').show();
+    
+     var monthNames = [
+        "January", "February", "March",
+        "April", "May", "June",
+        "July", "August", "September",
+        "October", "November", "December"
+    ]
+
+
+    var c_date = new Date();
+    var c_year = c_date.getFullYear()
+    var c_month = c_date.getMonth();
+
+    function currentMonthDisplay ( ) {
+        $('#month-label').text(monthNames[c_month]);
+        var month_length = new Date(c_year, c_month + 1, 0).getDate();
+        var day_of_week = new Date(c_year, c_month + 1, 1).getDay() 
+        var c_day = 1;
+        var test = day_of_week;
+
+        while (test < day_of_week + month_length) {
+            console.log(test);
+            console.log(day_of_week);
+            $('.day-of-week-num').eq(test).text(c_day);
+            c_day++;
+            test++;
+        }
+    }
+    currentMonthDisplay();
+   
+
+    $('#cal-left-switcher').click (function () {
+        if (c_month > 0) {
+            for(i = 0; i < $('.day-of-week-num').length; i ++) {
+                $('.day-of-week-num').eq(i).text('')
+            }
+            
+            c_month--;
+            $('#month-label').text(monthNames[c_month ])
+            var month_length = new Date(c_year, c_month + 1, 0).getDate();
+            var day_of_week = new Date(c_year, c_month + 1, 1).getDay() 
+            var c_day = 1;
+            var test = day_of_week;
+
+            while (test < day_of_week + month_length) {
+                console.log(test);
+                console.log(day_of_week);
+                $('.day-of-week-num').eq(test).text(c_day);
+                c_day++;
+                test++;
+            }
+            
+        }
+    })
+
+    $('#cal-right-switcher').click (function () {
+        if (c_month < 11) {
+            for(i = 0; i < $('.day-of-week-num').length; i ++) {
+                $('.day-of-week-num').eq(i).text('')
+            }
+            c_month++;
+            $('#month-label').text(monthNames[c_month ])
+            var month_length = new Date(c_year, c_month + 1, 0).getDate();
+            var day_of_week = new Date(c_year, c_month + 1, 1).getDay() 
+            var c_day = 1;
+            var test = day_of_week;
+
+            while (test < day_of_week + month_length) {
+                console.log(test);
+                console.log(day_of_week);
+                $('.day-of-week-num').eq(test).text(c_day);
+                c_day++;
+                test++;
+            }
+         
+        }
+    })
+
+
+   
+
+
+
+
     async function vue() {
         const dt = await loadData();
         let cities = dt.cities;
@@ -84,7 +167,7 @@ $('document').ready(function () {
                 }
             }
             $('html, body').stop().animate({
-                        scrollTop: $('#cinema-list').offset().top
+                        scrollTop: $('.cinemas-wrap').eq(0).offset().top
                     }, 400)
             
         })
@@ -407,7 +490,7 @@ $('document').ready(function () {
 
 
     $(window).resize(function () {
-        console.log($(window).width())
+        // console.log($(window).width())
         screenWidth();
     })
 
@@ -466,7 +549,7 @@ $('document').ready(function () {
         $('.dropped-menu').css('display', 'block');
         $('.dropped-menu').css('animation', 'fadeInRight 0.4s forwards')
     })
-
+    $('#body').show();
 })
 
 

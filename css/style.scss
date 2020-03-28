@@ -29,7 +29,6 @@ body {
 }
 
 .modal-div {
-  
   display: none;
   z-index: 10;
   position: fixed;
@@ -76,13 +75,13 @@ body {
   height: 100%;
 }
 
-table {
+#movie-info-table {
   width: 100%;
   border-collapse: collapse;
   border-bottom: 1px solid rgba(134, 134, 134, 0.65);
 }
 
-td {
+.movie-props {
   padding: 5px;
   text-align: center;
   border-bottom: 1px solid rgba(134, 134, 134, 0.65);
@@ -152,7 +151,7 @@ td {
   right: 0;
   display: none;
   width: 200px;
-  
+
   height: 100%;
   z-index: 10;
   background-color: white;
@@ -350,6 +349,12 @@ td {
   }
 }
 
+@media (min-width: 701px) {
+  .map_container {
+    margin-top: 60px;
+  }
+}
+
 @media (max-width: 899px) {
   .movies-div {
     max-width: 450px;
@@ -431,7 +436,6 @@ td {
 }
 
 .map_container {
-  margin-top: 60px;
   text-align: center;
 }
 
@@ -641,26 +645,32 @@ td {
   height: 450px;
 }
 
-#movie-info > div{
-    padding: 10px 20px 0 20px;
+#movie-info > div {
+  padding: 10px 20px 0 20px;
 }
 
 #close-modal-butt {
-    cursor: pointer;
-    display: none;
+  cursor: pointer;
+  display: none;
 }
 
-@media(max-width: 800px) and (min-height: 650px) {
+@media (max-width: 800px) and (min-height: 650px) {
+  .schedule-content {
+    height: 80%;
+  }
+
   .modal-content {
-    height: 650px;
- 
+    height: 80%;
   }
 }
 
-@media(max-width: 800px) and (max-height: 649px) {
+@media (max-width: 800px) and (max-height: 649px) {
+  .schedule-content {
+    height: 91%;
+  }
+
   .modal-content {
     height: 91%;
- 
   }
 }
 
@@ -673,18 +683,24 @@ td {
     display: flex;
   }
 
-  
-#lil-description-div {
-  display: block;
-}
+  #lil-description-div {
+    display: block;
+  }
 
   #description-div {
     display: none;
   }
 
   #close-modal-butt {
-      display:block;
+    display: block;
   }
+
+  .schedule-content {
+    width: 87%;
+    padding: 0px;
+    margin-top: 32px;
+  }
+
   .modal-content {
     width: 87%;
     padding: 0px;
@@ -707,11 +723,19 @@ td {
     font-size: 14px;
   }
 
-  #movie-info > div{
+  #movie-info > div {
     padding: 0;
   }
 }
 @media (max-width: 700px) {
+  .slogan {
+    margin: 0;
+  }
+
+  .map_container {
+    height: 400px;
+    margin-top: 0px;
+  }
   .map-div {
     max-width: 410px;
   }
@@ -784,9 +808,8 @@ td {
   }
 }
 
-
 .city {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 @media (max-width: 500px) {
@@ -857,37 +880,93 @@ td {
   background-color: #dedede;
 }
 
-
 #about-us {
-    margin-top: 90px;
-    margin-bottom: 30px;
+  margin-top: 90px;
+  margin-bottom: 30px;
 }
 
 .about-us-wrap {
-    width: 100%;
-    height: 500px;
-    background-size: cover;
-    background-position: center;
-    background-image: url(../img/background.jpg);
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/background.jpg);
 }
 
 .about-us-div {
-    width: 80%;height: 500px;
-    color: white;
-    text-align: center;
-    margin: auto;
+  width: 80%;
+  height: 500px;
+  color: white;
+  text-align: center;
+  margin: auto;
 }
 
+.schedule-wrap {
+  display: block;
+  // display: none;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.335);
+  opacity: 1;
+}
 
+.schedule-content {
+  padding: 80px 30px 80px 50px;
+  margin-top: 3%;
+  background-color: white;
+  width: 82.5%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 88%;
+  overflow-y: scroll;
+}
 
+.calendar-wrap {
+  width:300px; height: 100%;
+}
 
+.month-switch {
+  display: flex; margin-top: 20px;
+}
 
+#cal-left-switcher {
+  width: 30px; height: 30px; margin-left: 10%; background-image: url(../img/back.png); background-size: 15px 15px; background-repeat:no-repeat; background-position:center; cursor: pointer;
+}
+#cal-right-switcher {
+  width: 30px; height: 30px; margin-right: 10%; background-image: url(../img/next.png); background-size: 15px 15px; background-repeat:no-repeat; background-position:center; cursor: pointer;
+}
+.day-of-week,
+.day-of-week-num {
+  text-align: center;
+  width: 14.28%;
+}
 
+.calendar-table:before {
+  line-height: 1em;
+  content: "\200C";
+  display: block;
+}
 
+.calendar-table {
+  width: 200px;
+}
 
+.calendar-table tbody tr td {
+  padding: 0 0 5px 0;
+}
 
-
-
+.calendar-main {
+  width: 200px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
 
 
 
@@ -910,7 +989,6 @@ footer {
   color: rgba(0, 0, 0, 0.726);
   background-color: rgb(226, 225, 225);
 }
-
 
 .footer-contacts {
   margin-left: auto;
@@ -936,8 +1014,7 @@ footer {
 }
 
 .unshow {
-display: none;
-
+  display: none;
 }
 
 .checked {
@@ -947,7 +1024,7 @@ display: none;
 }
 
 .fadeInLeft {
-    animation: fadeInLeft 0.7s forwards;
+  animation: fadeInLeft 0.7s forwards;
 }
 
 @keyframes blur {
