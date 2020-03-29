@@ -30,7 +30,7 @@ body {
 
 .modal-div {
   display: none;
-  z-index: 10;
+  z-index: 7; //10
   position: fixed;
   width: 100%;
   height: 100%;
@@ -128,7 +128,7 @@ body {
 
 .menu-butt {
   width: 64px;
-  z-index: 5;
+  z-index: 3; //5
   height: 64px;
   background-image: url(../img/menu.png);
   background-repeat: no-repeat;
@@ -153,7 +153,7 @@ body {
   width: 200px;
 
   height: 100%;
-  z-index: 10;
+  z-index: 4; //10
   background-color: white;
   // display: none;
   overflow-y: auto;
@@ -903,8 +903,7 @@ body {
 
 .schedule-wrap {
   display: block;
-  // display: none;
-  z-index: 10;
+  z-index: 7; //10
   position: fixed;
   width: 100%;
   height: 100%;
@@ -925,23 +924,61 @@ body {
 }
 
 .calendar-wrap {
-  width:300px; height: 100%;
+  width: 300px;
+  height: 100%;
 }
 
 .month-switch {
-  display: flex; margin-top: 20px;
+  display: flex;
+  margin-top: 20px;
 }
 
 #cal-left-switcher {
-  width: 30px; height: 30px; margin-left: 10%; background-image: url(../img/back.png); background-size: 15px 15px; background-repeat:no-repeat; background-position:center; cursor: pointer;
+  width: 30px;
+  height: 30px;
+  margin-left: 10%;
+  background-image: url(../img/back.png);
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
 }
 #cal-right-switcher {
-  width: 30px; height: 30px; margin-right: 10%; background-image: url(../img/next.png); background-size: 15px 15px; background-repeat:no-repeat; background-position:center; cursor: pointer;
+  width: 30px;
+  height: 30px;
+  margin-right: 10%;
+  background-image: url(../img/next.png);
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
 }
 .day-of-week,
-.day-of-week-num {
+.day-of-week-num-wrap {
   text-align: center;
   width: 14.28%;
+  z-index: 9;
+}
+
+.day-of-week-num {
+  cursor: pointer;
+}
+
+#light {
+  width: 90px;
+  cursor: pointer;
+  z-index: 9;
+  height: 90px;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 35%,
+    rgba(255, 255, 255, 0.10407913165266103) 96%
+  );
+  position: absolute;
+  border-radius: 50%;
+  transform: translate3d(-50%, 5%, 0);
+  display: none;
 }
 
 .calendar-table:before {
@@ -951,7 +988,10 @@ body {
 }
 
 .calendar-table {
-  width: 200px;
+  width: 230px;
+  cursor: pointer;
+  background-color: rgb(253, 241, 227);
+  
 }
 
 .calendar-table tbody tr td {
@@ -959,25 +999,15 @@ body {
 }
 
 .calendar-main {
-  width: 200px;
+  width: 230px;
   height: auto;
+  box-shadow: 10px 10px 7px #aaaaaa6e;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 footer {
   display: flex;

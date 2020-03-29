@@ -2,8 +2,20 @@
 
 $('document').ready(function () {
 
+
+
+    const light = $('#light');
     
-     var monthNames = [
+    $('#tbody-position').mousemove((e) => {
+        var relativeXPosition = e.pageX - $('#tbody-position').offset().left;
+        var relativeYPosition = e.pageY - $('#tbody-position').offset().top;
+        var left = relativeXPosition + 'px'
+        var top = relativeYPosition + 'px'
+        $("#light").css( {"left" : left , "top" : top})
+    })
+    
+    
+    var monthNames = [
         "January", "February", "March",
         "April", "May", "June",
         "July", "August", "September",
@@ -23,11 +35,17 @@ $('document').ready(function () {
         var test = day_of_week;
 
         while (test < day_of_week + month_length) {
-            console.log(test);
-            console.log(day_of_week);
             $('.day-of-week-num').eq(test).text(c_day);
             c_day++;
             test++;
+        }
+        for (j = 0; j < $('.day-of-week-num').length; j++) {
+            if($('.day-of-week-num').eq(j).text() != '') {
+                $('.day-of-week-num').eq(j).css('border', '2px solid rgb(253, 241, 227)')
+            } else {
+                $('.day-of-week-num').eq(j).css('border', 'none')
+
+            }
         }
     }
     currentMonthDisplay();
@@ -53,8 +71,16 @@ $('document').ready(function () {
                 c_day++;
                 test++;
             }
-            
+            for (j = 0; j < $('.day-of-week-num').length; j++) {
+                if($('.day-of-week-num').eq(j).text() != '') {
+                    $('.day-of-week-num').eq(j).css('border', '2px solid rgb(253, 241, 227)')
+                } else {
+                    $('.day-of-week-num').eq(j).css('border', 'none')
+
+                }
+            }
         }
+
     })
 
     $('#cal-right-switcher').click (function () {
@@ -77,6 +103,14 @@ $('document').ready(function () {
                 test++;
             }
          
+            for (j = 0; j < $('.day-of-week-num').length; j++) {
+                if($('.day-of-week-num').eq(j).text() != '') {
+                    $('.day-of-week-num').eq(j).css('border', '2px solid rgb(253, 241, 227)')
+                } else {
+                    $('.day-of-week-num').eq(j).css('border', 'none')
+
+                }
+            }
         }
     })
 
@@ -84,7 +118,25 @@ $('document').ready(function () {
    
 
 
+    
 
+    $('.day-of-week-num').mouseenter(function() {
+        this.style.border = '2px solid rgb(246, 208, 162)'
+    })
+
+    
+    $('.day-of-week-num').mouseleave(function() {
+        this.style.border = '2px solid rgb(253, 241, 227)'
+    })
+
+    $('.calendar-table').mouseenter(function() {
+        $('#light').css('display', 'block')
+    })
+
+    
+    $('.calendar-table').mouseleave(function() {
+        $('#light').css('display', 'none')
+    })
 
     async function vue() {
         const dt = await loadData();

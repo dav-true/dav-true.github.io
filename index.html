@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     <header>
         <div class="header-background">
             <div></div>
@@ -351,6 +352,8 @@
                         </div>
                        
                         <div class="calendar-main" id="days-of-month">
+                            <div id='light'></div>
+
                             <table class="calendar-table" >
                                 <thead>
                                     <tr style="width: 100%;">
@@ -363,67 +366,67 @@
                                         <td class='day-of-week'>S</td>
                                     </tr>
                                 </thead>
-                                <tbody style="margin-top: 20px;">
+                                <tbody id="tbody-position" style="margin-top: 20px;">
                                   
                                     <tr style="width: 100%;">
-                                        <td class='day-of-week-num sun'></td>
-                                        <td class='day-of-week-num mon'></td>
-                                        <td class='day-of-week-num tue'></td>
-                                        <td class='day-of-week-num wed'></td>
-                                        <td class='day-of-week-num thu'></td>
-                                        <td class='day-of-week-num fri'></td>
-                                        <td class='day-of-week-num sat'></td>
+                                        <td class='day-of-week-num-wrap sun'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap mon'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap tue'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap wed'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap thu'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap fri'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap sat'><div class='day-of-week-num'></div></td>
                                     </tr>
                                     <tr style="width: 100%;">
-                                        <td class='day-of-week-num sun'></td>
-                                        <td class='day-of-week-num mon'></td>
-                                        <td class='day-of-week-num tue'></td>
-                                        <td class='day-of-week-num wed'></td>
-                                        <td class='day-of-week-num thu'></td>
-                                        <td class='day-of-week-num fri'></td>
-                                        <td class='day-of-week-num sat'></td>
+                                        <td class='day-of-week-num-wrap sun'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap mon'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap tue'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap wed'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap thu'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap fri'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap sat'><div class='day-of-week-num'></div></td>
                                     </tr>
                                     <tr style="width: 100%;">
-                                        <td class='day-of-week-num sun'></td>
-                                        <td class='day-of-week-num mon'></td>
-                                        <td class='day-of-week-num tue'></td>
-                                        <td class='day-of-week-num wed'></td>
-                                        <td class='day-of-week-num thu'></td>
-                                        <td class='day-of-week-num fri'></td>
-                                        <td class='day-of-week-num sat'></td>
+                                        <td class='day-of-week-num-wrap sun'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap mon'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap tue'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap wed'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap thu'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap fri'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap sat'><div class='day-of-week-num'></div></td>
                                     </tr>
                                     <tr style="width: 100%;">
-                                        <td class='day-of-week-num sun'></td>
-                                        <td class='day-of-week-num mon'></td>
-                                        <td class='day-of-week-num tue'></td>
-                                        <td class='day-of-week-num wed'></td>
-                                        <td class='day-of-week-num thu'></td>
-                                        <td class='day-of-week-num fri'></td>
-                                        <td class='day-of-week-num sat'></td>
+                                        <td class='day-of-week-num-wrap sun'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap mon'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap tue'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap wed'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap thu'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap fri'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap sat'><div class='day-of-week-num'></div></td>
                                     </tr>
                                     <tr style="width: 100%;">
-                                        <td class='day-of-week-num sun'></td>
-                                        <td class='day-of-week-num mon'></td>
-                                        <td class='day-of-week-num tue'></td>
-                                        <td class='day-of-week-num wed'></td>
-                                        <td class='day-of-week-num thu'></td>
-                                        <td class='day-of-week-num fri'></td>
-                                        <td class='day-of-week-num sat'></td>
+                                        <td class='day-of-week-num-wrap sun'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap mon'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap tue'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap wed'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap thu'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap fri'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap sat'><div class='day-of-week-num'></div></td>
                                     </tr>
                                     <tr style="width: 100%;">
-                                        <td class='day-of-week-num sun'></td>
-                                        <td class='day-of-week-num mon'></td>
-                                        <td class='day-of-week-num tue'></td>
-                                        <td class='day-of-week-num wed'></td>
-                                        <td class='day-of-week-num thu'></td>
-                                        <td class='day-of-week-num fri'></td>
-                                        <td class='day-of-week-num sat'></td>
+                                        <td class='day-of-week-num-wrap sun'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap mon'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap tue'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap wed'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap thu'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap fri'><div class='day-of-week-num'></div></td>
+                                        <td class='day-of-week-num-wrap sat'><div class='day-of-week-num'></div></td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
-                    <div style="width:400px; height: 100%; background-color: bisque; margin-right: auto; margin-left: auto;"></div>
+                    <div style="width:400px; height: 100%;  margin-right: auto; margin-left: auto;"></div>
                 </div>
             </div>
         </div>
