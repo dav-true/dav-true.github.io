@@ -213,9 +213,7 @@ body {
   -webkit-transition: width 0.25s ease; }
 
 .nav-bar li a:hover::after,
-.nav-bar li a:focus::after,
-.dropped-menu-bar li a:hover::after,
-.dropped-menu-bar li a:focus::after {
+.dropped-menu-bar li a:hover::after {
   width: 100%;
   left: 0;
   background: #f3bab4; }
@@ -727,7 +725,7 @@ body {
   margin: auto; }
 
 .schedule-wrap {
-  display: block;
+  display: none;
   z-index: 7;
   position: fixed;
   width: 100%;

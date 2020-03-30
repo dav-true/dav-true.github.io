@@ -216,13 +216,29 @@ $('document').ready(function () {
             }
         })
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
         var monthNames = [
             "January", "February", "March",
             "April", "May", "June",
             "July", "August", "September",
             "October", "November", "December"
         ]
+        var schedt;
+        var cinemaID;
 
+        // async function schedtLoad() {
+        //     schedt = await loadData('https://my-json-server.typicode.com/dav-true/schedb/db');
+        // }
+        function schedtLoad() {
+            var request = new XMLHttpRequest();
+            request.open("GET", "js/db.json", false);
+            request.send(null)
+            schedt = JSON.parse(request.responseText);
+        }
+
+
+        schedtLoad();
         var c_date = new Date();
         var c_year = c_date.getFullYear()
         var c_month = c_date.getMonth();
@@ -249,12 +265,9 @@ $('document').ready(function () {
 
                 }
             }
-            $('#schedule-label').html('Schedule on the ' + c_day + "<sup>th</sup> of " + monthNames[c_month])
-
 
         }
-        currentMonthDisplay();
-
+        
 
         $('#cal-left-switcher').click(function () {
             if (c_month > 0) {
@@ -277,66 +290,24 @@ $('document').ready(function () {
             }
         })
 
-        $('#tbody-position').mousemove((e) => {
-            var relativeXPosition = e.pageX - $('#tbody-position').offset().left;
-            var relativeYPosition = e.pageY - $('#tbody-position').offset().top;
-            var left = relativeXPosition + 'px'
-            var top = relativeYPosition + 'px'
-            $("#light").css({ "left": left, "top": top })
-        })
-
-
-        $('.day-of-week-num').mouseenter(function () {
-            this.style.border = '2px solid rgb(246, 208, 162)'
-        })
-
-
-        $('.day-of-week-num').mouseleave(function () {
-            this.style.border = '2px solid rgb(253, 241, 227)'
-        })
-
-        $('.calendar-main').mouseenter(function () {
-            $('#light').css('display', 'block')
-        })
-
-
-        $('.calendar-main').mouseleave(function () {
-            $('#light').css('display', 'none')
-        })
-
-
-        var schedt;
-        var cinemaID;
-        async function schedtLoad() {
-            schedt = await loadData('https://my-json-server.typicode.com/dav-true/schedb/db');
-        }
-        schedtLoad();
-
-        $('.schedule-button').click(function () {
-            $('body').css('overflow-y', 'hidden')
-            cinemaID = $(this).index('.schedule-button')
-            $('.schedule-wrap').css('display', 'block');
-            console.log(cinemaID)
-        })
-
-        $('.day-of-week-num').click(function () {
-
-            var chosen_day = parseInt($(this).text());
+        function getDaySchedule(chosen_day, cinemaID) {
             var chosen_month = c_month;
             var chosen_year = c_year;
             var scheduledDays = schedt.cinemas_schedule[cinemaID].schedule;
 
+            var controller = 0;
             for (t = 0; t < scheduledDays.length; t++) {
                 var day_counter = 0;
                 var current_day_schedule = scheduledDays[t];
                 if (current_day_schedule.year == chosen_year && current_day_schedule.month == chosen_month) {
                     for (g = 0; g < current_day_schedule.days.length; g++) {
                         if (current_day_schedule.days[g] == chosen_day) {
-
                             day_counter++;
                         }
                     }
+                    
                     if (day_counter > 0) {
+                        controller++
                         var htmlstring = "";
                         for (n = 0; n < current_day_schedule.current_schedule.length; n++) {
                             let time = current_day_schedule.current_schedule[n].time;
@@ -350,11 +321,44 @@ $('document').ready(function () {
                             `
                             $('.schedule-info-table').html(htmlstring);
                         }
-                    }
+                        
+                    } 
                 }
-            }
+            } 
+            if(controller == 0) {
+                $('.schedule-info-table').html('<p style="width:350px;font-size:20px; text-align:center;">There is no movie on your date yet</p>\
+                                                <p style="width:350px;font-size:20px; text-align:center;">Come back later!</p>')    
+                        
+            } 
+            
+            
+        }
 
-            $('#schedule-label').html('Schedule on the ' + chosen_day + "<sup>th</sup> of " + monthNames[chosen_month])
+
+        
+
+        $('.schedule-button').click(function () {
+            $('.schedule-info-table').html('<p style="width:350px;font-size:20px; text-align:center;">There is no movie on your date yet</p>\
+                                            <p style="width:350px;font-size:20px; text-align:center;">Come back later!</p>')
+            c_date = new Date();
+            c_year = c_date.getFullYear()
+            c_month = c_date.getMonth();
+            c_day = c_date.getDate();
+            currentMonthDisplay();
+            $('body').css('overflow-y', 'hidden')
+            cinemaID = $(this).index('.schedule-button')
+            console.log(cinemaID)
+            $('.schedule-wrap').css('display', 'block');
+            getDaySchedule(c_day, cinemaID)
+            $('#schedule-label').html('Schedule on the ' + c_day + "<sup>th</sup> of " + monthNames[c_month])
+            
+
+        })
+
+        $('.day-of-week-num').click(function () {
+            var chosen_day = parseInt($(this).text());
+            getDaySchedule(chosen_day, cinemaID)
+            $('#schedule-label').html('Schedule on the ' + chosen_day + "<sup>th</sup> of " + monthNames[c_month])
         })
 
 
@@ -442,6 +446,34 @@ $('document').ready(function () {
             }
         }
     }
+
+    $('#tbody-position').mousemove((e) => {
+        var relativeXPosition = e.pageX - $('#tbody-position').offset().left;
+        var relativeYPosition = e.pageY - $('#tbody-position').offset().top;
+        var left = relativeXPosition + 'px'
+        var top = relativeYPosition + 'px'
+        $("#light").css({ "left": left, "top": top })
+    })
+
+
+    $('.day-of-week-num').mouseenter(function () {
+        this.style.border = '2px solid rgb(246, 208, 162)'
+    })
+
+
+    $('.day-of-week-num').mouseleave(function () {
+        this.style.border = '2px solid rgb(253, 241, 227)'
+    })
+
+    $('.calendar-main').mouseenter(function () {
+        $('#light').css('display', 'block')
+    })
+
+
+    $('.calendar-main').mouseleave(function () {
+        $('#light').css('display', 'none')
+    })
+
 
     $(".poster-div").mouseenter(function () {       /////////////////////// Poster blur
         var i = $(this).index();
