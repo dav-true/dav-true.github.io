@@ -3,145 +3,12 @@
 $('document').ready(function () {
 
 
-
-    const light = $('#light');
-    
-    $('#tbody-position').mousemove((e) => {
-        var relativeXPosition = e.pageX - $('#tbody-position').offset().left;
-        var relativeYPosition = e.pageY - $('#tbody-position').offset().top;
-        var left = relativeXPosition + 'px'
-        var top = relativeYPosition + 'px'
-        $("#light").css( {"left" : left , "top" : top})
-    })
-    
-    
-    var monthNames = [
-        "January", "February", "March",
-        "April", "May", "June",
-        "July", "August", "September",
-        "October", "November", "December"
-    ]
-
-
-    var c_date = new Date();
-    var c_year = c_date.getFullYear()
-    var c_month = c_date.getMonth();
-
-    function currentMonthDisplay ( ) {
-        $('#month-label').text(monthNames[c_month]);
-        var month_length = new Date(c_year, c_month + 1, 0).getDate();
-        var day_of_week = new Date(c_year, c_month + 1, 1).getDay() 
-        var c_day = 1;
-        var test = day_of_week;
-
-        while (test < day_of_week + month_length) {
-            $('.day-of-week-num').eq(test).text(c_day);
-            c_day++;
-            test++;
-        }
-        for (j = 0; j < $('.day-of-week-num').length; j++) {
-            if($('.day-of-week-num').eq(j).text() != '') {
-                $('.day-of-week-num').eq(j).css('border', '2px solid rgb(253, 241, 227)')
-            } else {
-                $('.day-of-week-num').eq(j).css('border', 'none')
-
-            }
-        }
-    }
-    currentMonthDisplay();
-   
-
-    $('#cal-left-switcher').click (function () {
-        if (c_month > 0) {
-            for(i = 0; i < $('.day-of-week-num').length; i ++) {
-                $('.day-of-week-num').eq(i).text('')
-            }
-            
-            c_month--;
-            $('#month-label').text(monthNames[c_month ])
-            var month_length = new Date(c_year, c_month + 1, 0).getDate();
-            var day_of_week = new Date(c_year, c_month + 1, 1).getDay() 
-            var c_day = 1;
-            var test = day_of_week;
-
-            while (test < day_of_week + month_length) {
-                console.log(test);
-                console.log(day_of_week);
-                $('.day-of-week-num').eq(test).text(c_day);
-                c_day++;
-                test++;
-            }
-            for (j = 0; j < $('.day-of-week-num').length; j++) {
-                if($('.day-of-week-num').eq(j).text() != '') {
-                    $('.day-of-week-num').eq(j).css('border', '2px solid rgb(253, 241, 227)')
-                } else {
-                    $('.day-of-week-num').eq(j).css('border', 'none')
-
-                }
-            }
-        }
-
-    })
-
-    $('#cal-right-switcher').click (function () {
-        if (c_month < 11) {
-            for(i = 0; i < $('.day-of-week-num').length; i ++) {
-                $('.day-of-week-num').eq(i).text('')
-            }
-            c_month++;
-            $('#month-label').text(monthNames[c_month ])
-            var month_length = new Date(c_year, c_month + 1, 0).getDate();
-            var day_of_week = new Date(c_year, c_month + 1, 1).getDay() 
-            var c_day = 1;
-            var test = day_of_week;
-
-            while (test < day_of_week + month_length) {
-                console.log(test);
-                console.log(day_of_week);
-                $('.day-of-week-num').eq(test).text(c_day);
-                c_day++;
-                test++;
-            }
-         
-            for (j = 0; j < $('.day-of-week-num').length; j++) {
-                if($('.day-of-week-num').eq(j).text() != '') {
-                    $('.day-of-week-num').eq(j).css('border', '2px solid rgb(253, 241, 227)')
-                } else {
-                    $('.day-of-week-num').eq(j).css('border', 'none')
-
-                }
-            }
-        }
-    })
-
-
-   
-
-
-    
-
-    $('.day-of-week-num').mouseenter(function() {
-        this.style.border = '2px solid rgb(246, 208, 162)'
-    })
-
-    
-    $('.day-of-week-num').mouseleave(function() {
-        this.style.border = '2px solid rgb(253, 241, 227)'
-    })
-
-    $('.calendar-table').mouseenter(function() {
-        $('#light').css('display', 'block')
-    })
-
-    
-    $('.calendar-table').mouseleave(function() {
-        $('#light').css('display', 'none')
-    })
-
     async function vue() {
-        const dt = await loadData();
+        let dt = await loadData('https://my-json-server.typicode.com/dav-true/dbjson/db');
         let cities = dt.cities;
         let cinemas = dt.cinemas;
+
+
 
         Vue.component("city-option", {
             props: { city: Object },
@@ -164,7 +31,7 @@ $('document').ready(function () {
                                                                                 color: black; background-color: #fbcfa8; ">{{cinema.city}}</span></sup></p>
                                     <p class="cinema-address">{{cinema.address}}</p>
                                     <p class="cinema-num">{{cinema.phone_num}}</p>
-                                    <p style="padding: 5px; background-color: yellowgreen; width: 100px; text-align: center; border-radius: 5px;">Schedule</p>
+                                    <p class="schedule-button" style="padding: 5px; background-color: yellowgreen; width: 100px; text-align: center; border-radius: 5px;">Schedule</p>
                                 </div>
                             </div>
                             <div class='cinema-tags-div'>
@@ -180,99 +47,94 @@ $('document').ready(function () {
 
         })
 
-     
-        function fadeInLeft () { 
-            var el     = $('#cinema-list'),  
-            newone = el.clone(true);
-                  
+
+        function fadeInLeft() {
+            var el = $('#cinema-list'),
+                newone = el.clone(true);
+
             el.before(newone);
-               
+
             $("." + el.attr("class") + ":last").remove();
 
         }
-        
-        var temp = [];
-    
 
-        $('.mark').click (function () {
+        var temp = [];
+
+
+        $('.mark').click(function () {
             fadeInLeft();
             temp = [];
-            $('.cinema-class-tag').attr('data-checked','false').css( {'background-color' : "#dedede", 'color': "black", "border-color": "black" });
+            $('.cinema-class-tag').attr('data-checked', 'false').css({ 'background-color': "#dedede", 'color': "black", "border-color": "black" });
             $('#no-cinema-label').css('display', 'none');
             var city = $(this).attr('data-city');
-            console.log(city)
             $('#city-lable').text(city);
-            
-            for(i = 0; i < $('.cinema').length; i++) {
+
+            for (i = 0; i < $('.cinema').length; i++) {
                 var c = $('.cinema').eq(i).contents().find('span').text();
-                if(c == city) {
+                if (c == city) {
                     $('.cinema').eq(i).addClass('checked');
                     $('.cinema').eq(i).removeClass('unchecked')
                     $('.cinema').eq(i).addClass('show');
                     $('.cinema').eq(i).removeClass('unshow')
-                       
+
                 } else {
                     $('.cinema').eq(i).removeClass('checked')
                     $('.cinema').eq(i).addClass('unchecked');
                     $('.cinema').eq(i).removeClass('show')
-                    $('.cinema').eq(i).addClass('unshow');            
+                    $('.cinema').eq(i).addClass('unshow');
                 }
             }
             $('html, body').stop().animate({
-                        scrollTop: $('.cinemas-wrap').eq(0).offset().top
-                    }, 400)
-            
+                scrollTop: $('.cinemas-wrap').eq(0).offset().top
+            }, 400)
+
         })
 
-        
-        
-        
-        
-        
-        $('.city').click (function () {
+
+        $('.city').click(function () {
             fadeInLeft();
             temp = [];
-            $('.cinema-class-tag').attr('data-checked','false').css( {'background-color' : "#dedede", 'color': "black", "border-color": "black" });
+            $('.cinema-class-tag').attr('data-checked', 'false').css({ 'background-color': "#dedede", 'color': "black", "border-color": "black" });
             $('#no-cinema-label').css('display', 'none');
             var city = $(this).text();
             $('#city-lable').text(city);
-            if(city == "All cities") { 
+            if (city == "All cities") {
                 $('.cinema').addClass('checked');
                 $('.cinema').removeClass('unchecked');
                 $('.cinema').addClass('show');
                 $('.cinema').removeClass('unshow');
-                
+
             }
             else {
 
-                for(i = 0; i < $('.cinema').length; i++) {
+                for (i = 0; i < $('.cinema').length; i++) {
                     var c = $('.cinema').eq(i).contents().find('span').text();
-                    if(c == city) {
+                    if (c == city) {
                         $('.cinema').eq(i).addClass('checked');
                         $('.cinema').eq(i).removeClass('unchecked')
                         $('.cinema').eq(i).addClass('show');
                         $('.cinema').eq(i).removeClass('unshow')
-                       
+
                     } else {
                         $('.cinema').eq(i).removeClass('checked')
                         $('.cinema').eq(i).addClass('unchecked');
                         $('.cinema').eq(i).removeClass('show')
                         $('.cinema').eq(i).addClass('unshow');
-                        
+
 
                     }
                 }
-            } 
+            }
 
         })
 
-      
+
 
         $('.cinema-class-tag').click(function () {
-            
+
             fadeInLeft();
 
-            if($(this).attr('data-checked') ==  'false') {
+            if ($(this).attr('data-checked') == 'false') {
                 $(this).css('background-color', "yellowgreen");
                 $(this).css('color', "white");
                 $(this).attr('data-checked', 'true')
@@ -288,7 +150,7 @@ $('document').ready(function () {
 
             if (temp.length == 0) {
                 temp.push(clicked);
-                
+
             } else {
                 var temp_counter = 0;
                 for (n = 0; n < temp.length; n++) {
@@ -299,20 +161,20 @@ $('document').ready(function () {
 
                 if (temp_counter == 0) {
                     temp.push(clicked);
-                    
+
                 } else {
                     const index = temp.indexOf(clicked)
                     if (index > -1) {
                         temp.splice(index, 1)
                     }
 
-                    
+
                 }
             }
 
 
 
-            var cinema_counter = 0; 
+            var cinema_counter = 0;
             for (i = 0; i < $('.checked').length; i++) {
                 if (temp.length > 0) {
                     var c = $('.checked').eq(i).contents().find('.tags');  /////////All tags in line
@@ -333,26 +195,168 @@ $('document').ready(function () {
                     } else if (counter >= temp.length) {
                         $('.checked').eq(i).addClass('show')
                         $('.checked').eq(i).removeClass('unshow')
-                      
-                       
+
+
                     }
-                    
+
                 } else if (temp.length == 0) {
                     for (i = 0; i < $('.cinema').length; i++) {
                         $('.checked').eq(i).addClass('show')
                         $('.checked').eq(i).removeClass('unshow')
-                        
-                        
+
+
                     }
                 }
-            } 
+            }
 
-            if(cinema_counter == $(".checked").length) {
+            if (cinema_counter == $(".checked").length) {
                 $('#no-cinema-label').css("display", "block")
             } else {
                 $('#no-cinema-label').css("display", "none")
             }
         })
+
+        var monthNames = [
+            "January", "February", "March",
+            "April", "May", "June",
+            "July", "August", "September",
+            "October", "November", "December"
+        ]
+
+        var c_date = new Date();
+        var c_year = c_date.getFullYear()
+        var c_month = c_date.getMonth();
+        var c_day = c_date.getDate();
+
+
+        function currentMonthDisplay() {
+            $('#month-label').text(monthNames[c_month]);
+            var month_length = new Date(c_year, c_month + 1, 0).getDate();
+            var day_of_week = new Date(c_year, c_month + 1, 1).getDay()
+            var temp_day = 1;
+            var test = day_of_week;
+
+            while (test < day_of_week + month_length) {
+                $('.day-of-week-num').eq(test).text(temp_day);
+                temp_day++;
+                test++;
+            }
+            for (j = 0; j < $('.day-of-week-num').length; j++) {
+                if ($('.day-of-week-num').eq(j).text() != '') {
+                    $('.day-of-week-num').eq(j).css('border', '2px solid rgb(253, 241, 227)')
+                } else {
+                    $('.day-of-week-num').eq(j).css('border', 'none')
+
+                }
+            }
+            $('#schedule-label').html('Schedule on the ' + c_day + "<sup>th</sup> of " + monthNames[c_month])
+
+
+        }
+        currentMonthDisplay();
+
+
+        $('#cal-left-switcher').click(function () {
+            if (c_month > 0) {
+                for (i = 0; i < $('.day-of-week-num').length; i++) {
+                    $('.day-of-week-num').eq(i).text('')
+                }
+                c_month--;
+                currentMonthDisplay()
+            }
+
+        })
+
+        $('#cal-right-switcher').click(function () {
+            if (c_month < 11) {
+                for (i = 0; i < $('.day-of-week-num').length; i++) {
+                    $('.day-of-week-num').eq(i).text('')
+                }
+                c_month++;
+                currentMonthDisplay()
+            }
+        })
+
+        $('#tbody-position').mousemove((e) => {
+            var relativeXPosition = e.pageX - $('#tbody-position').offset().left;
+            var relativeYPosition = e.pageY - $('#tbody-position').offset().top;
+            var left = relativeXPosition + 'px'
+            var top = relativeYPosition + 'px'
+            $("#light").css({ "left": left, "top": top })
+        })
+
+
+        $('.day-of-week-num').mouseenter(function () {
+            this.style.border = '2px solid rgb(246, 208, 162)'
+        })
+
+
+        $('.day-of-week-num').mouseleave(function () {
+            this.style.border = '2px solid rgb(253, 241, 227)'
+        })
+
+        $('.calendar-main').mouseenter(function () {
+            $('#light').css('display', 'block')
+        })
+
+
+        $('.calendar-main').mouseleave(function () {
+            $('#light').css('display', 'none')
+        })
+
+
+        var schedt;
+        var cinemaID;
+        async function schedtLoad() {
+            schedt = await loadData('https://my-json-server.typicode.com/dav-true/schedb/db');
+        }
+        schedtLoad();
+
+        $('.schedule-button').click(function () {
+            $('body').css('overflow-y', 'hidden')
+            cinemaID = $(this).index('.schedule-button')
+            $('.schedule-wrap').css('display', 'block');
+            console.log(cinemaID)
+        })
+
+        $('.day-of-week-num').click(function () {
+
+            var chosen_day = parseInt($(this).text());
+            var chosen_month = c_month;
+            var chosen_year = c_year;
+            var scheduledDays = schedt.cinemas_schedule[cinemaID].schedule;
+
+            for (t = 0; t < scheduledDays.length; t++) {
+                var day_counter = 0;
+                var current_day_schedule = scheduledDays[t];
+                if (current_day_schedule.year == chosen_year && current_day_schedule.month == chosen_month) {
+                    for (g = 0; g < current_day_schedule.days.length; g++) {
+                        if (current_day_schedule.days[g] == chosen_day) {
+
+                            day_counter++;
+                        }
+                    }
+                    if (day_counter > 0) {
+                        var htmlstring = "";
+                        for (n = 0; n < current_day_schedule.current_schedule.length; n++) {
+                            let time = current_day_schedule.current_schedule[n].time;
+                            let movie = current_day_schedule.current_schedule[n].movie;
+                            htmlstring +=
+                                ` 
+                                <tr>
+                                    <td class="schedule-props">${time}</td>
+                                    <td class="schedule-props">${movie}</td>
+                                </tr>
+                            `
+                            $('.schedule-info-table').html(htmlstring);
+                        }
+                    }
+                }
+            }
+
+            $('#schedule-label').html('Schedule on the ' + chosen_day + "<sup>th</sup> of " + monthNames[chosen_month])
+        })
+
 
     }
 
@@ -361,13 +365,13 @@ $('document').ready(function () {
 
 
 
+
     var ln = $('.poster').length;
     var groups = ln / 3;
     var modal = $('.modal-div')[0];
     var options_div = $("#cities-options-div");
 
-    async function loadData() {  /////////////////// Load json file
-        const url = "https://my-json-server.typicode.com/dav-true/dbjson/db";
+    async function loadData(url) {  /////////////////// Load json file
         const res = await fetch(url);
 
         if (res.ok) {
@@ -378,10 +382,6 @@ $('document').ready(function () {
         return res.json();
     }
 
-
-    $(window).scroll(function () {
-      console.log(window.scrollY)  
-    })
 
     function slideToBlock(i) {
         var i = i;
@@ -402,7 +402,7 @@ $('document').ready(function () {
             target = "#contacts"
         }
 
-        console.log(target)
+
         $('html, body').stop().animate({
             scrollTop: $(target).offset().top
         }, time)
@@ -464,33 +464,37 @@ $('document').ready(function () {
         $('.mark::after').eq(i).fadeTo(300, 0)
     })
 
-    $('#close-modal-butt').click (() => {
-        $('.modal-div').fadeTo(400, 0).delay(400).queue(function (next) { 
-            $(this).css('display', 'none'); 
-            next(); 
-          });
-          $('body').css('overflow-y', 'scroll')
-          
-          let target = $('#trailer-iframe');
+    $('#close-modal-butt').click(() => {
+        $('.modal-div').fadeTo(400, 0).delay(400).queue(function (next) {
+            $(this).css('display', 'none');
+            next();
+        });
+        $('body').css('overflow-y', 'scroll')
 
-          target.attr('src', '');
-        
+        let target = $('#trailer-iframe');
+
+        target.attr('src', '');
+
     })
 
 
     window.onclick = function (event) {  ///////////////////////////// Modal div closing by clicking ourside the block
         if (event.target == modal) {
             $('body').css('overflow-y', 'scroll')
-            $('.modal-div').fadeTo(400, 0).delay(400).queue(function (next) { 
-                $(this).css('display', 'none'); 
-                next(); 
-              });
-          
+            $('.modal-div').fadeTo(400, 0).delay(400).queue(function (next) {
+                $(this).css('display', 'none');
+                next();
+            });
+
 
             let target = $('#trailer-iframe');
 
             target.attr('src', '');
 
+        }
+        if (event.target == $('.schedule-wrap')[0]) {
+            $('.schedule-wrap').css('display', 'none')
+            $('body').css('overflow-y', 'scroll')
         }
     }
 
@@ -549,12 +553,12 @@ $('document').ready(function () {
     screenWidth();
 
     $('.centered').click(async function () {             //////////////////////// Poster name clicking function
-        
+
         $('body').css('overflow-y', 'hidden')
-        
+
         var id = $(this).attr('data-jsonid');
 
-        var data = await loadData();
+        var data = await loadData('https://my-json-server.typicode.com/dav-true/dbjson/db');
         let target = $('#trailer-iframe');
 
         target.attr('src', data.movies[id].url);
@@ -573,7 +577,7 @@ $('document').ready(function () {
 
     })
 
-   
+
 
 
     $("#cities").click(() => {                  ///////////////////////////// Cities drop down list animationW
