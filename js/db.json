@@ -76,14 +76,64 @@
           "days": [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30],
           "current_schedule": [
             {
-              "time": "9:00",
-              "movie": "Alien",
-              "hall": 2
+              "time": "10:00",
+              "movie": "Mother"
             },
             {
-              "time": "10:00",
-              "movie": "La la land",
-              "hall": 5
+              "time": "11:10",
+              "movie": "Moonlight"
+            },
+            {
+              "time": "12:00",
+              "movie": "Ready Player One"
+            },
+            {
+              "time": "12:55",
+              "movie": "Blackkklansman"
+            },
+            {
+              "time": "13:35",
+              "movie": "La La Land"
+            },
+            {
+              "time": "14:30",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "15:05",
+              "movie": "Spiderman"
+            },
+            {
+              "time": "16:00",
+              "movie": "Alien"
+            },
+            {
+              "time": "16:45",
+              "movie": "First Reformed"
+            },
+            {
+              "time": "17:50",
+              "movie": "Spiderman"
+            },
+            {
+              "time": "18:30",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "19:35",
+              "movie": "First Reformed"
+            },
+            {
+              "time": "21:00",
+              "movie": "Moonlight"
+            },
+            {
+              "time": "22:25",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "23:20",
+              "movie": "Alien"
             }
           ]
         },
@@ -94,63 +144,63 @@
           "current_schedule": [
             {
               "time": "10:00",
-              "movie": "Suspiria"
-            },
-            {
-              "time": "11:20",
-              "movie": "Alien"
-            },
-            {
-              "time": "11:50",
-              "movie": "Moonlight"
-            },
-            {
-              "time": "12:35",
-              "movie": "First Reformed"
-            },
-            {
-              "time": "13:45",
-              "movie": "Blade Runner 2049"
-            },
-            {
-              "time": "14:30",
-              "movie": "Ready Player One"
-            },
-            {
-              "time": "15:05",
-              "movie": "Spiderman"
-            },
-            {
-              "time": "15:45",
-              "movie": "Mother"
-            },
-            {
-              "time": "16:20",
               "movie": "Blackkklansman"
             },
             {
-              "time": "17:50",
-              "movie": "La La Land"
-            },
-            {
-              "time": "18:30",
-              "movie": "Mary Poppins Returns"
-            },
-            {
-              "time": "19:40",
-              "movie": "Ready Player One"
-            },
-            {
-              "time": "20:50",
+              "time": "11:25",
               "movie": "First Reformed"
             },
             {
-              "time": "22:05",
+              "time": "11:30",
+              "movie": "Moonlight"
+            },
+            {
+              "time": "12:55",
+              "movie": "Spiderman"
+            },
+            {
+              "time": "13:35",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "14:35",
+              "movie": "Alien"
+            },
+            {
+              "time": "15:15",
               "movie": "Mother"
             },
             {
-              "time": "23:10",
+              "time": "15:45",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "16:30",
+              "movie": "Ready Player One"
+            },
+            {
+              "time": "17:40",
               "movie": "Moonlight"
+            },
+            {
+              "time": "18:50",
+              "movie": "La La Land"
+            },
+            {
+              "time": "19:45",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "20:55",
+              "movie": "Alien"
+            },
+            {
+              "time": "22:15",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "23:30",
+              "movie": "La La Land"
             }
           ]
         }
@@ -165,64 +215,64 @@
           "days": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 ],
          "current_schedule": [
             {
-              "time": "10:00",
-              "movie": "Suspiria"
-            },
-            {
-              "time": "11:20",
-              "movie": "Alien"
-            },
-            {
-              "time": "11:50",
-              "movie": "Moonlight"
-            },
-            {
-              "time": "12:35",
-              "movie": "First Reformed"
-            },
-            {
-              "time": "13:45",
-              "movie": "Blade Runner 2049"
-            },
-            {
-              "time": "14:30",
-              "movie": "Ready Player One"
-            },
-            {
-              "time": "15:05",
-              "movie": "Spiderman"
-            },
-            {
-              "time": "15:45",
-              "movie": "Mother"
-            },
-            {
-              "time": "16:20",
+              "time": "11:00",
               "movie": "Blackkklansman"
             },
             {
-              "time": "17:50",
-              "movie": "La La Land"
-            },
-            {
-              "time": "18:30",
+              "time": "12:20",
               "movie": "Mary Poppins Returns"
             },
             {
-              "time": "19:40",
-              "movie": "Ready Player One"
-            },
-            {
-              "time": "20:50",
+              "time": "12:50",
               "movie": "First Reformed"
             },
             {
-              "time": "22:05",
+              "time": "13:35",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "14:45",
+              "movie": "Spiderman"
+            },
+            {
+              "time": "15:30",
+              "movie": "Ready Player One"
+            },
+            {
+              "time": "16:05",
+              "movie": "Suspiria"
+            },
+            {
+              "time": "16:45",
+              "movie": "Mother"
+            },
+            {
+              "time": "17:20",
+              "movie": "La La Land"
+            },
+            {
+              "time": "18:50",
+              "movie": "Blackkklansman"
+            },
+            {
+              "time": "19:30",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "20:40",
+              "movie": "Moonlight"
+            },
+            {
+              "time": "21:50",
+              "movie": "First Reformed"
+            },
+            {
+              "time": "23:05",
               "movie": "Mother"
             },
             {
               "time": "23:10",
-              "movie": "Moonlight"
+              "movie": "Alien"
             }
           ]
         },
@@ -232,12 +282,12 @@
           "days": [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30],
           "current_schedule": [
             {
-              "time": "10:00",
-              "movie": "Suspiria"
+              "time": "11:00",
+              "movie": "First Reformed"
             },
             {
               "time": "11:20",
-              "movie": "Alien"
+              "movie": "Mother"
             },
             {
               "time": "11:50",
@@ -245,7 +295,7 @@
             },
             {
               "time": "12:35",
-              "movie": "First Reformed"
+              "movie": "La La Land"
             },
             {
               "time": "13:45",
@@ -253,7 +303,7 @@
             },
             {
               "time": "14:30",
-              "movie": "Ready Player One"
+              "movie": "Blackkklansman"
             },
             {
               "time": "15:05",
@@ -261,31 +311,31 @@
             },
             {
               "time": "15:45",
-              "movie": "Mother"
+              "movie": "Blade Runner 2049"
             },
             {
               "time": "16:20",
-              "movie": "Blackkklansman"
-            },
-            {
-              "time": "17:50",
-              "movie": "La La Land"
-            },
-            {
-              "time": "18:30",
-              "movie": "Mary Poppins Returns"
-            },
-            {
-              "time": "19:40",
               "movie": "Ready Player One"
             },
             {
+              "time": "17:50",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "18:30",
+              "movie": "Suspiria"
+            },
+            {
+              "time": "19:40",
+              "movie": "La La Land"
+            },
+            {
               "time": "20:50",
-              "movie": "First Reformed"
+              "movie": "Mother"
             },
             {
               "time": "22:05",
-              "movie": "Mother"
+              "movie": "Alien"
             },
             {
               "time": "23:10",
@@ -301,134 +351,134 @@
         {
           "year": 2020,
           "month": 3,
-          "days": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 ],
+          "days": [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30],
           "current_schedule": [
             {
               "time": "10:00",
-              "movie": "Suspiria"
+              "movie": "Mother"
             },
             {
-              "time": "11:20",
-              "movie": "Alien"
-            },
-            {
-              "time": "11:50",
+              "time": "11:10",
               "movie": "Moonlight"
             },
             {
-              "time": "12:35",
-              "movie": "First Reformed"
+              "time": "12:00",
+              "movie": "Ready Player One"
             },
             {
-              "time": "13:45",
-              "movie": "Blade Runner 2049"
+              "time": "12:55",
+              "movie": "Blackkklansman"
+            },
+            {
+              "time": "13:35",
+              "movie": "La La Land"
             },
             {
               "time": "14:30",
-              "movie": "Ready Player One"
+              "movie": "Mary Poppins Returns"
             },
             {
               "time": "15:05",
               "movie": "Spiderman"
             },
             {
-              "time": "15:45",
-              "movie": "Mother"
+              "time": "16:00",
+              "movie": "Alien"
             },
             {
-              "time": "16:20",
-              "movie": "Blackkklansman"
-            },
-            {
-              "time": "17:50",
-              "movie": "La La Land"
-            },
-            {
-              "time": "18:30",
-              "movie": "Mary Poppins Returns"
-            },
-            {
-              "time": "19:40",
-              "movie": "Ready Player One"
-            },
-            {
-              "time": "20:50",
+              "time": "16:45",
               "movie": "First Reformed"
             },
             {
-              "time": "22:05",
-              "movie": "Mother"
+              "time": "17:50",
+              "movie": "Spiderman"
             },
             {
-              "time": "23:10",
+              "time": "18:30",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "19:25",
+              "movie": "Blackkklansman"
+            },
+            {
+              "time": "20:55",
               "movie": "Moonlight"
+            },
+            {
+              "time": "22:15",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "23:20",
+              "movie": "Alien"
             }
           ]
         },
         {
           "year": 2020,
           "month": 3,
-          "days": [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30],
+          "days": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 ],
           "current_schedule": [
             {
               "time": "10:00",
-              "movie": "Suspiria"
-            },
-            {
-              "time": "11:20",
-              "movie": "Alien"
-            },
-            {
-              "time": "11:50",
-              "movie": "Moonlight"
-            },
-            {
-              "time": "12:35",
-              "movie": "First Reformed"
-            },
-            {
-              "time": "13:45",
-              "movie": "Blade Runner 2049"
-            },
-            {
-              "time": "14:30",
-              "movie": "Ready Player One"
-            },
-            {
-              "time": "15:05",
-              "movie": "Spiderman"
-            },
-            {
-              "time": "15:45",
-              "movie": "Mother"
-            },
-            {
-              "time": "16:20",
               "movie": "Blackkklansman"
             },
             {
-              "time": "17:50",
-              "movie": "La La Land"
-            },
-            {
-              "time": "18:30",
-              "movie": "Mary Poppins Returns"
-            },
-            {
-              "time": "19:40",
-              "movie": "Ready Player One"
-            },
-            {
-              "time": "20:50",
+              "time": "11:25",
               "movie": "First Reformed"
             },
             {
-              "time": "22:05",
+              "time": "11:30",
+              "movie": "Moonlight"
+            },
+            {
+              "time": "12:55",
+              "movie": "Spiderman"
+            },
+            {
+              "time": "13:35",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "14:35",
+              "movie": "Alien"
+            },
+            {
+              "time": "15:15",
               "movie": "Mother"
             },
             {
-              "time": "23:10",
+              "time": "15:45",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "16:30",
+              "movie": "Ready Player One"
+            },
+            {
+              "time": "17:40",
               "movie": "Moonlight"
+            },
+            {
+              "time": "18:50",
+              "movie": "La La Land"
+            },
+            {
+              "time": "19:45",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "20:55",
+              "movie": "Alien"
+            },
+            {
+              "time": "22:15",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "23:30",
+              "movie": "La La Land"
             }
           ]
         }
@@ -436,22 +486,72 @@
     },
     {
       "cinemaID": 3,
-      "cinemaName": "Piramida",
+      
       "schedule": [
         {
           "year": 2020,
           "month": 3,
           "days": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 ],
-          "current_schedule": [
+         "current_schedule": [
             {
-              "time": "9:00",
-              "movie": "Alien",
-              "hall": 2
+              "time": "11:00",
+              "movie": "Blackkklansman"
             },
             {
-              "time": "10:00",
-              "movie": "Mother",
-              "hall": 5
+              "time": "12:20",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "12:50",
+              "movie": "First Reformed"
+            },
+            {
+              "time": "13:35",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "14:45",
+              "movie": "Spiderman"
+            },
+            {
+              "time": "15:30",
+              "movie": "Ready Player One"
+            },
+            {
+              "time": "16:05",
+              "movie": "Suspiria"
+            },
+            {
+              "time": "16:45",
+              "movie": "Mother"
+            },
+            {
+              "time": "17:20",
+              "movie": "La La Land"
+            },
+            {
+              "time": "18:50",
+              "movie": "Blackkklansman"
+            },
+            {
+              "time": "19:30",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "20:40",
+              "movie": "Moonlight"
+            },
+            {
+              "time": "21:50",
+              "movie": "First Reformed"
+            },
+            {
+              "time": "23:05",
+              "movie": "Mother"
+            },
+            {
+              "time": "23:10",
+              "movie": "Alien"
             }
           ]
         },
@@ -461,12 +561,12 @@
           "days": [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30],
           "current_schedule": [
             {
-              "time": "10:00",
-              "movie": "Suspiria"
+              "time": "11:00",
+              "movie": "First Reformed"
             },
             {
               "time": "11:20",
-              "movie": "Alien"
+              "movie": "Mother"
             },
             {
               "time": "11:50",
@@ -474,7 +574,7 @@
             },
             {
               "time": "12:35",
-              "movie": "First Reformed"
+              "movie": "La La Land"
             },
             {
               "time": "13:45",
@@ -482,7 +582,7 @@
             },
             {
               "time": "14:30",
-              "movie": "Ready Player One"
+              "movie": "Blackkklansman"
             },
             {
               "time": "15:05",
@@ -490,31 +590,31 @@
             },
             {
               "time": "15:45",
-              "movie": "Mother"
+              "movie": "Blade Runner 2049"
             },
             {
               "time": "16:20",
-              "movie": "Blackkklansman"
-            },
-            {
-              "time": "17:50",
-              "movie": "La La Land"
-            },
-            {
-              "time": "18:30",
-              "movie": "Mary Poppins Returns"
-            },
-            {
-              "time": "19:40",
               "movie": "Ready Player One"
             },
             {
+              "time": "17:50",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "18:30",
+              "movie": "Suspiria"
+            },
+            {
+              "time": "19:40",
+              "movie": "La La Land"
+            },
+            {
               "time": "20:50",
-              "movie": "First Reformed"
+              "movie": "Mother"
             },
             {
               "time": "22:05",
-              "movie": "Mother"
+              "movie": "Alien"
             },
             {
               "time": "23:10",
@@ -526,7 +626,6 @@
     },
     {
       "cinemaID": 4,
-      "cinemaName": "Piramida",
       "schedule": [
         {
           "year": 2020,
@@ -534,14 +633,64 @@
           "days": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 ],
           "current_schedule": [
             {
-              "time": "9:00",
-              "movie": "Alien",
-              "hall": 2
+              "time": "10:00",
+              "movie": "Suspiria"
             },
             {
-              "time": "10:00",
-              "movie": "Mother",
-              "hall": 5
+              "time": "11:20",
+              "movie": "Alien"
+            },
+            {
+              "time": "11:50",
+              "movie": "Moonlight"
+            },
+            {
+              "time": "12:35",
+              "movie": "First Reformed"
+            },
+            {
+              "time": "13:45",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "14:30",
+              "movie": "Ready Player One"
+            },
+            {
+              "time": "15:05",
+              "movie": "Spiderman"
+            },
+            {
+              "time": "15:45",
+              "movie": "Mother"
+            },
+            {
+              "time": "16:20",
+              "movie": "Blackkklansman"
+            },
+            {
+              "time": "17:50",
+              "movie": "La La Land"
+            },
+            {
+              "time": "18:30",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "19:40",
+              "movie": "Ready Player One"
+            },
+            {
+              "time": "20:50",
+              "movie": "First Reformed"
+            },
+            {
+              "time": "22:05",
+              "movie": "Mother"
+            },
+            {
+              "time": "23:10",
+              "movie": "Moonlight"
             }
           ]
         },
@@ -616,22 +765,71 @@
     },
     {
       "cinemaID": 5,
-      "cinemaName": "Piramida",
       "schedule": [
         {
           "year": 2020,
           "month": 3,
           "days": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 ],
-          "current_schedule": [
+         "current_schedule": [
             {
-              "time": "9:00",
-              "movie": "Alien",
-              "hall": 2
+              "time": "11:00",
+              "movie": "Blackkklansman"
             },
             {
-              "time": "10:00",
-              "movie": "Mother",
-              "hall": 5
+              "time": "12:20",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "12:50",
+              "movie": "First Reformed"
+            },
+            {
+              "time": "13:35",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "14:45",
+              "movie": "Spiderman"
+            },
+            {
+              "time": "15:30",
+              "movie": "Ready Player One"
+            },
+            {
+              "time": "16:05",
+              "movie": "Suspiria"
+            },
+            {
+              "time": "16:45",
+              "movie": "Mother"
+            },
+            {
+              "time": "17:20",
+              "movie": "La La Land"
+            },
+            {
+              "time": "18:50",
+              "movie": "Blackkklansman"
+            },
+            {
+              "time": "19:30",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "20:40",
+              "movie": "Moonlight"
+            },
+            {
+              "time": "21:50",
+              "movie": "First Reformed"
+            },
+            {
+              "time": "23:05",
+              "movie": "Mother"
+            },
+            {
+              "time": "23:10",
+              "movie": "Alien"
             }
           ]
         },
@@ -639,6 +837,78 @@
           "year": 2020,
           "month": 3,
           "days": [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30],
+          "current_schedule": [
+            {
+              "time": "11:00",
+              "movie": "First Reformed"
+            },
+            {
+              "time": "11:20",
+              "movie": "Mother"
+            },
+            {
+              "time": "11:50",
+              "movie": "Moonlight"
+            },
+            {
+              "time": "12:35",
+              "movie": "La La Land"
+            },
+            {
+              "time": "13:45",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "14:30",
+              "movie": "Blackkklansman"
+            },
+            {
+              "time": "15:05",
+              "movie": "Spiderman"
+            },
+            {
+              "time": "15:45",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "16:20",
+              "movie": "Ready Player One"
+            },
+            {
+              "time": "17:50",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "18:30",
+              "movie": "Suspiria"
+            },
+            {
+              "time": "19:40",
+              "movie": "La La Land"
+            },
+            {
+              "time": "20:50",
+              "movie": "Mother"
+            },
+            {
+              "time": "22:05",
+              "movie": "Alien"
+            },
+            {
+              "time": "23:10",
+              "movie": "Moonlight"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cinemaID": 6,
+      "schedule": [
+        {
+          "year": 2020,
+          "month": 3,
+          "days": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 ],
           "current_schedule": [
             {
               "time": "10:00",
@@ -699,29 +969,6 @@
             {
               "time": "23:10",
               "movie": "Moonlight"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "cinemaID": 6,
-      "cinemaName": "Piramida",
-      "schedule": [
-        {
-          "year": 2020,
-          "month": 3,
-          "days": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 ],
-          "current_schedule": [
-            {
-              "time": "9:00",
-              "movie": "Alien",
-              "hall": 2
-            },
-            {
-              "time": "10:00",
-              "movie": "Mother",
-              "hall": 5
             }
           ]
         },
@@ -796,22 +1043,72 @@
     },
     {
       "cinemaID": 7,
-      "cinemaName": "Piramida",
+
       "schedule": [
         {
           "year": 2020,
           "month": 3,
           "days": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 ],
-          "current_schedule": [
+         "current_schedule": [
             {
-              "time": "9:00",
-              "movie": "Alien",
-              "hall": 2
+              "time": "11:00",
+              "movie": "Blackkklansman"
             },
             {
-              "time": "10:00",
-              "movie": "Mother",
-              "hall": 5
+              "time": "12:20",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "12:50",
+              "movie": "First Reformed"
+            },
+            {
+              "time": "13:35",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "14:45",
+              "movie": "Spiderman"
+            },
+            {
+              "time": "15:30",
+              "movie": "Ready Player One"
+            },
+            {
+              "time": "16:05",
+              "movie": "Suspiria"
+            },
+            {
+              "time": "16:45",
+              "movie": "Mother"
+            },
+            {
+              "time": "17:20",
+              "movie": "La La Land"
+            },
+            {
+              "time": "18:50",
+              "movie": "Blackkklansman"
+            },
+            {
+              "time": "19:30",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "20:40",
+              "movie": "Moonlight"
+            },
+            {
+              "time": "21:50",
+              "movie": "First Reformed"
+            },
+            {
+              "time": "23:05",
+              "movie": "Mother"
+            },
+            {
+              "time": "23:10",
+              "movie": "Alien"
             }
           ]
         },
@@ -819,6 +1116,79 @@
           "year": 2020,
           "month": 3,
           "days": [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30],
+          "current_schedule": [
+            {
+              "time": "11:00",
+              "movie": "First Reformed"
+            },
+            {
+              "time": "11:20",
+              "movie": "Mother"
+            },
+            {
+              "time": "11:50",
+              "movie": "Moonlight"
+            },
+            {
+              "time": "12:35",
+              "movie": "La La Land"
+            },
+            {
+              "time": "13:45",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "14:30",
+              "movie": "Blackkklansman"
+            },
+            {
+              "time": "15:05",
+              "movie": "Spiderman"
+            },
+            {
+              "time": "15:45",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "16:20",
+              "movie": "Ready Player One"
+            },
+            {
+              "time": "17:50",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "18:30",
+              "movie": "Suspiria"
+            },
+            {
+              "time": "19:40",
+              "movie": "La La Land"
+            },
+            {
+              "time": "20:50",
+              "movie": "Mother"
+            },
+            {
+              "time": "22:05",
+              "movie": "Alien"
+            },
+            {
+              "time": "23:10",
+              "movie": "Moonlight"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cinemaID": 8,
+      
+      "schedule": [
+        {
+          "year": 2020,
+          "month": 3,
+          "days": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 ],
           "current_schedule": [
             {
               "time": "10:00",
@@ -879,29 +1249,6 @@
             {
               "time": "23:10",
               "movie": "Moonlight"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "cinemaID": 8,
-      "cinemaName": "Piramida",
-      "schedule": [
-        {
-          "year": 2020,
-          "month": 3,
-          "days": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 ],
-          "current_schedule": [
-            {
-              "time": "9:00",
-              "movie": "Alien",
-              "hall": 2
-            },
-            {
-              "time": "10:00",
-              "movie": "Mother",
-              "hall": 5
             }
           ]
         },
@@ -976,22 +1323,72 @@
     },
     {
       "cinemaID": 9,
-      "cinemaName": "Piramida",
+      
       "schedule": [
         {
           "year": 2020,
           "month": 3,
           "days": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 ],
-          "current_schedule": [
+         "current_schedule": [
             {
-              "time": "9:00",
-              "movie": "Alien",
-              "hall": 2
+              "time": "11:00",
+              "movie": "Blackkklansman"
             },
             {
-              "time": "10:00",
-              "movie": "Mother",
-              "hall": 5
+              "time": "12:20",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "12:50",
+              "movie": "First Reformed"
+            },
+            {
+              "time": "13:35",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "14:45",
+              "movie": "Spiderman"
+            },
+            {
+              "time": "15:30",
+              "movie": "Ready Player One"
+            },
+            {
+              "time": "16:05",
+              "movie": "Suspiria"
+            },
+            {
+              "time": "16:45",
+              "movie": "Mother"
+            },
+            {
+              "time": "17:20",
+              "movie": "La La Land"
+            },
+            {
+              "time": "18:50",
+              "movie": "Blackkklansman"
+            },
+            {
+              "time": "19:30",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "20:40",
+              "movie": "Moonlight"
+            },
+            {
+              "time": "21:50",
+              "movie": "First Reformed"
+            },
+            {
+              "time": "23:05",
+              "movie": "Mother"
+            },
+            {
+              "time": "23:10",
+              "movie": "Alien"
             }
           ]
         },
@@ -999,6 +1396,79 @@
           "year": 2020,
           "month": 3,
           "days": [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30],
+          "current_schedule": [
+            {
+              "time": "11:00",
+              "movie": "First Reformed"
+            },
+            {
+              "time": "11:20",
+              "movie": "Mother"
+            },
+            {
+              "time": "11:50",
+              "movie": "Moonlight"
+            },
+            {
+              "time": "12:35",
+              "movie": "La La Land"
+            },
+            {
+              "time": "13:45",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "14:30",
+              "movie": "Blackkklansman"
+            },
+            {
+              "time": "15:05",
+              "movie": "Spiderman"
+            },
+            {
+              "time": "15:45",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "16:20",
+              "movie": "Ready Player One"
+            },
+            {
+              "time": "17:50",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "18:30",
+              "movie": "Suspiria"
+            },
+            {
+              "time": "19:40",
+              "movie": "La La Land"
+            },
+            {
+              "time": "20:50",
+              "movie": "Mother"
+            },
+            {
+              "time": "22:05",
+              "movie": "Alien"
+            },
+            {
+              "time": "23:10",
+              "movie": "Moonlight"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cinemaID": 10,
+      
+      "schedule": [
+        {
+          "year": 2020,
+          "month": 3,
+          "days": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 ],
           "current_schedule": [
             {
               "time": "10:00",
@@ -1059,29 +1529,6 @@
             {
               "time": "23:10",
               "movie": "Moonlight"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "cinemaID": 10,
-      "cinemaName": "Piramida",
-      "schedule": [
-        {
-          "year": 2020,
-          "month": 3,
-          "days": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 ],
-          "current_schedule": [
-            {
-              "time": "9:00",
-              "movie": "Alien",
-              "hall": 2
-            },
-            {
-              "time": "10:00",
-              "movie": "Mother",
-              "hall": 5
             }
           ]
         },
@@ -1156,22 +1603,72 @@
     },
     {
       "cinemaID": 11,
-      "cinemaName": "Piramida",
+      
       "schedule": [
         {
           "year": 2020,
           "month": 3,
           "days": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 ],
-          "current_schedule": [
+         "current_schedule": [
             {
-              "time": "9:00",
-              "movie": "Alien",
-              "hall": 2
+              "time": "11:00",
+              "movie": "Blackkklansman"
             },
             {
-              "time": "10:00",
-              "movie": "Mother",
-              "hall": 5
+              "time": "12:20",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "12:50",
+              "movie": "First Reformed"
+            },
+            {
+              "time": "13:35",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "14:45",
+              "movie": "Spiderman"
+            },
+            {
+              "time": "15:30",
+              "movie": "Ready Player One"
+            },
+            {
+              "time": "16:05",
+              "movie": "Suspiria"
+            },
+            {
+              "time": "16:45",
+              "movie": "Mother"
+            },
+            {
+              "time": "17:20",
+              "movie": "La La Land"
+            },
+            {
+              "time": "18:50",
+              "movie": "Blackkklansman"
+            },
+            {
+              "time": "19:30",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "20:40",
+              "movie": "Moonlight"
+            },
+            {
+              "time": "21:50",
+              "movie": "First Reformed"
+            },
+            {
+              "time": "23:05",
+              "movie": "Mother"
+            },
+            {
+              "time": "23:10",
+              "movie": "Alien"
             }
           ]
         },
@@ -1179,6 +1676,79 @@
           "year": 2020,
           "month": 3,
           "days": [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30],
+          "current_schedule": [
+            {
+              "time": "11:00",
+              "movie": "First Reformed"
+            },
+            {
+              "time": "11:20",
+              "movie": "Mother"
+            },
+            {
+              "time": "11:50",
+              "movie": "Moonlight"
+            },
+            {
+              "time": "12:35",
+              "movie": "La La Land"
+            },
+            {
+              "time": "13:45",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "14:30",
+              "movie": "Blackkklansman"
+            },
+            {
+              "time": "15:05",
+              "movie": "Spiderman"
+            },
+            {
+              "time": "15:45",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "16:20",
+              "movie": "Ready Player One"
+            },
+            {
+              "time": "17:50",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "18:30",
+              "movie": "Suspiria"
+            },
+            {
+              "time": "19:40",
+              "movie": "La La Land"
+            },
+            {
+              "time": "20:50",
+              "movie": "Mother"
+            },
+            {
+              "time": "22:05",
+              "movie": "Alien"
+            },
+            {
+              "time": "23:10",
+              "movie": "Moonlight"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cinemaID": 12,
+      
+      "schedule": [
+        {
+          "year": 2020,
+          "month": 3,
+          "days": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 ],
           "current_schedule": [
             {
               "time": "10:00",
@@ -1239,29 +1809,6 @@
             {
               "time": "23:10",
               "movie": "Moonlight"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "cinemaID": 12,
-      "cinemaName": "Piramida",
-      "schedule": [
-        {
-          "year": 2020,
-          "month": 3,
-          "days": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 ],
-          "current_schedule": [
-            {
-              "time": "9:00",
-              "movie": "Alien",
-              "hall": 2
-            },
-            {
-              "time": "10:00",
-              "movie": "Mother",
-              "hall": 5
             }
           ]
         },
@@ -1336,22 +1883,72 @@
     },
     {
       "cinemaID": 13,
-      "cinemaName": "Piramida",
+      
       "schedule": [
         {
           "year": 2020,
           "month": 3,
           "days": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 ],
-          "current_schedule": [
+         "current_schedule": [
             {
-              "time": "9:00",
-              "movie": "Alien",
-              "hall": 2
+              "time": "11:00",
+              "movie": "Blackkklansman"
             },
             {
-              "time": "10:00",
-              "movie": "Mother",
-              "hall": 5
+              "time": "12:20",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "12:50",
+              "movie": "First Reformed"
+            },
+            {
+              "time": "13:35",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "14:45",
+              "movie": "Spiderman"
+            },
+            {
+              "time": "15:30",
+              "movie": "Ready Player One"
+            },
+            {
+              "time": "16:05",
+              "movie": "Suspiria"
+            },
+            {
+              "time": "16:45",
+              "movie": "Mother"
+            },
+            {
+              "time": "17:20",
+              "movie": "La La Land"
+            },
+            {
+              "time": "18:50",
+              "movie": "Blackkklansman"
+            },
+            {
+              "time": "19:30",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "20:40",
+              "movie": "Moonlight"
+            },
+            {
+              "time": "21:50",
+              "movie": "First Reformed"
+            },
+            {
+              "time": "23:05",
+              "movie": "Mother"
+            },
+            {
+              "time": "23:10",
+              "movie": "Alien"
             }
           ]
         },
@@ -1359,6 +1956,79 @@
           "year": 2020,
           "month": 3,
           "days": [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30],
+          "current_schedule": [
+            {
+              "time": "11:00",
+              "movie": "First Reformed"
+            },
+            {
+              "time": "11:20",
+              "movie": "Mother"
+            },
+            {
+              "time": "11:50",
+              "movie": "Moonlight"
+            },
+            {
+              "time": "12:35",
+              "movie": "La La Land"
+            },
+            {
+              "time": "13:45",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "14:30",
+              "movie": "Blackkklansman"
+            },
+            {
+              "time": "15:05",
+              "movie": "Spiderman"
+            },
+            {
+              "time": "15:45",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "16:20",
+              "movie": "Ready Player One"
+            },
+            {
+              "time": "17:50",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "18:30",
+              "movie": "Suspiria"
+            },
+            {
+              "time": "19:40",
+              "movie": "La La Land"
+            },
+            {
+              "time": "20:50",
+              "movie": "Mother"
+            },
+            {
+              "time": "22:05",
+              "movie": "Alien"
+            },
+            {
+              "time": "23:10",
+              "movie": "Moonlight"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cinemaID": 14,
+      
+      "schedule": [
+        {
+          "year": 2020,
+          "month": 3,
+          "days": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 ],
           "current_schedule": [
             {
               "time": "10:00",
@@ -1419,29 +2089,6 @@
             {
               "time": "23:10",
               "movie": "Moonlight"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "cinemaID": 14,
-      "cinemaName": "Piramida",
-      "schedule": [
-        {
-          "year": 2020,
-          "month": 3,
-          "days": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 ],
-          "current_schedule": [
-            {
-              "time": "9:00",
-              "movie": "Alien",
-              "hall": 2
-            },
-            {
-              "time": "10:00",
-              "movie": "Mother",
-              "hall": 5
             }
           ]
         },
@@ -1516,22 +2163,72 @@
     },
     {
       "cinemaID": 15,
-      "cinemaName": "Piramida",
+      
       "schedule": [
         {
           "year": 2020,
           "month": 3,
           "days": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 ],
-          "current_schedule": [
+         "current_schedule": [
             {
-              "time": "9:00",
-              "movie": "Alien",
-              "hall": 2
+              "time": "11:00",
+              "movie": "Blackkklansman"
             },
             {
-              "time": "10:00",
-              "movie": "Mother",
-              "hall": 5
+              "time": "12:20",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "12:50",
+              "movie": "First Reformed"
+            },
+            {
+              "time": "13:35",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "14:45",
+              "movie": "Spiderman"
+            },
+            {
+              "time": "15:30",
+              "movie": "Ready Player One"
+            },
+            {
+              "time": "16:05",
+              "movie": "Suspiria"
+            },
+            {
+              "time": "16:45",
+              "movie": "Mother"
+            },
+            {
+              "time": "17:20",
+              "movie": "La La Land"
+            },
+            {
+              "time": "18:50",
+              "movie": "Blackkklansman"
+            },
+            {
+              "time": "19:30",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "20:40",
+              "movie": "Moonlight"
+            },
+            {
+              "time": "21:50",
+              "movie": "First Reformed"
+            },
+            {
+              "time": "23:05",
+              "movie": "Mother"
+            },
+            {
+              "time": "23:10",
+              "movie": "Alien"
             }
           ]
         },
@@ -1539,6 +2236,79 @@
           "year": 2020,
           "month": 3,
           "days": [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30],
+          "current_schedule": [
+            {
+              "time": "11:00",
+              "movie": "First Reformed"
+            },
+            {
+              "time": "11:20",
+              "movie": "Mother"
+            },
+            {
+              "time": "11:50",
+              "movie": "Moonlight"
+            },
+            {
+              "time": "12:35",
+              "movie": "La La Land"
+            },
+            {
+              "time": "13:45",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "14:30",
+              "movie": "Blackkklansman"
+            },
+            {
+              "time": "15:05",
+              "movie": "Spiderman"
+            },
+            {
+              "time": "15:45",
+              "movie": "Blade Runner 2049"
+            },
+            {
+              "time": "16:20",
+              "movie": "Ready Player One"
+            },
+            {
+              "time": "17:50",
+              "movie": "Mary Poppins Returns"
+            },
+            {
+              "time": "18:30",
+              "movie": "Suspiria"
+            },
+            {
+              "time": "19:40",
+              "movie": "La La Land"
+            },
+            {
+              "time": "20:50",
+              "movie": "Mother"
+            },
+            {
+              "time": "22:05",
+              "movie": "Alien"
+            },
+            {
+              "time": "23:10",
+              "movie": "Moonlight"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cinemaID": 16,
+      
+      "schedule": [
+        {
+          "year": 2020,
+          "month": 3,
+          "days": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 ],
           "current_schedule": [
             {
               "time": "10:00",
@@ -1599,29 +2369,6 @@
             {
               "time": "23:10",
               "movie": "Moonlight"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "cinemaID": 16,
-      "cinemaName": "Piramida",
-      "schedule": [
-        {
-          "year": 2020,
-          "month": 3,
-          "days": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 ],
-          "current_schedule": [
-            {
-              "time": "9:00",
-              "movie": "Alien",
-              "hall": 2
-            },
-            {
-              "time": "10:00",
-              "movie": "Mother",
-              "hall": 5
             }
           ]
         },
