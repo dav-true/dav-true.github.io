@@ -48,8 +48,8 @@ $('document').ready(function () {
         })
 
 
-        function fadeInLeft() {
-            var el = $('#cinema-list'),
+        function restartAnimation(id) {
+            var el = $(id),
                 newone = el.clone(true);
 
             el.before(newone);
@@ -62,7 +62,7 @@ $('document').ready(function () {
 
 
         $('.mark').click(function () {
-            fadeInLeft();
+            restartAnimation('#cinema-list');
             temp = [];
             $('.cinema-class-tag').attr('data-checked', 'false').css({ 'background-color': "#dedede", 'color': "black", "border-color": "black" });
             $('#no-cinema-label').css('display', 'none');
@@ -92,7 +92,7 @@ $('document').ready(function () {
 
 
         $('.city').click(function () {
-            fadeInLeft();
+            restartAnimation('#cinema-list');
             temp = [];
             $('.cinema-class-tag').attr('data-checked', 'false').css({ 'background-color': "#dedede", 'color': "black", "border-color": "black" });
             $('#no-cinema-label').css('display', 'none');
@@ -132,7 +132,7 @@ $('document').ready(function () {
 
         $('.cinema-class-tag').click(function () {
 
-            fadeInLeft();
+            restartAnimation('#cinema-list');
 
             if ($(this).attr('data-checked') == 'false') {
                 $(this).css('background-color', "yellowgreen");
@@ -247,6 +247,8 @@ $('document').ready(function () {
 
         function currentMonthDisplay() {
             $('#month-label').text(monthNames[c_month]);
+            restartAnimation("#month-label")
+
             var month_length = new Date(c_year, c_month + 1, 0).getDate();
             var day_of_week = new Date(c_year, c_month + 1, 1).getDay()
             var temp_day = 1;
@@ -271,6 +273,7 @@ $('document').ready(function () {
 
         $('#cal-left-switcher').click(function () {
             if (c_month > 0) {
+
                 for (i = 0; i < $('.day-of-week-num').length; i++) {
                     $('.day-of-week-num').eq(i).text('')
                 }
@@ -349,13 +352,16 @@ $('document').ready(function () {
             cinemaID = $(this).index('.schedule-button')
             console.log(cinemaID)
             $('.schedule-wrap').css('display', 'block');
+            $('.schedule-wrap').fadeTo(300, 1)
             getDaySchedule(c_day, cinemaID)
             $('#schedule-label').html('Schedule on the ' + c_day + "<sup>th</sup> of " + monthNames[c_month])
+
             
 
         })
 
         $('.day-of-week-num').click(function () {
+            restartAnimation('#schedule-info-wrap')
             var chosen_day = parseInt($(this).text());
             getDaySchedule(chosen_day, cinemaID)
             $('#schedule-label').html('Schedule on the ' + chosen_day + "<sup>th</sup> of " + monthNames[c_month])
@@ -455,14 +461,36 @@ $('document').ready(function () {
         $("#light").css({ "left": left, "top": top })
     })
 
-
+    var heller = 0;
     $('.day-of-week-num').mouseenter(function () {
         this.style.border = '2px solid rgb(246, 208, 162)'
+        
+    })
+
+    
+    $('.day-of-week-num').click(function () {
+        for (j = 0; j < $('.day-of-week-num').length; j++) {
+            if ($('.day-of-week-num').eq(j).text() != '') {
+                $('.day-of-week-num').eq(j).css('border', '2px solid rgb(253, 241, 227)')
+            } else {
+                $('.day-of-week-num').eq(j).css('border', 'none')
+
+            }
+        }
+        heller = $(this).index('.day-of-week-num')
+        this.style.border = '2px solid rgb(246, 208, 162)'
+        
     })
 
 
     $('.day-of-week-num').mouseleave(function () {
-        this.style.border = '2px solid rgb(253, 241, 227)'
+            console.log($(this).index('.day-of-week-num'))
+            if($(this).index('.day-of-week-num') == heller) {
+                this.style.border = '2px solid rgb(246, 208, 162)'
+            } else {
+                this.style.border = '2px solid rgb(253, 241, 227)'
+            }
+
     })
 
     $('.calendar-main').mouseenter(function () {
@@ -497,7 +525,7 @@ $('document').ready(function () {
     })
 
     $('#close-modal-butt').click(() => {
-        $('.modal-div').fadeTo(400, 0).delay(400).queue(function (next) {
+        $('.modal-div').fadeTo(300, 0).delay(300).queue(function (next) {
             $(this).css('display', 'none');
             next();
         });
@@ -513,7 +541,7 @@ $('document').ready(function () {
     window.onclick = function (event) {  ///////////////////////////// Modal div closing by clicking ourside the block
         if (event.target == modal) {
             $('body').css('overflow-y', 'scroll')
-            $('.modal-div').fadeTo(400, 0).delay(400).queue(function (next) {
+            $('.modal-div').fadeTo(300, 0).delay(300).queue(function (next) {
                 $(this).css('display', 'none');
                 next();
             });
@@ -525,8 +553,11 @@ $('document').ready(function () {
 
         }
         if (event.target == $('.schedule-wrap')[0]) {
-            $('.schedule-wrap').css('display', 'none')
             $('body').css('overflow-y', 'scroll')
+            $('.schedule-wrap').fadeTo(300, 0).delay(300).queue(function (next) {
+                $(this).css('display', 'none');
+                next();
+            });
         }
     }
 

@@ -903,6 +903,7 @@ body {
 
 .schedule-wrap {
   // display: block;
+  cursor: pointer;
   display: none;
   z-index: 7; //10
   position: fixed;
@@ -914,6 +915,7 @@ body {
 }
 
 .schedule-content {
+  cursor: text;
   padding: 80px 30px 80px 50px;
   margin-top: 3%;
   background-color: white;
@@ -973,7 +975,7 @@ body {
   background: rgb(255, 255, 255);
   background: radial-gradient(
     circle,
-    rgba(255, 255, 255, 1) 35%,
+    rgba(255, 255, 255, 1) 25%,
     rgba(255, 255, 255, 0.10407913165266103) 96%
   );
   position: absolute;
@@ -1017,11 +1019,53 @@ body {
 
 }
 
-.schedule-info-table {
-
+.schedule-button {
+  cursor: pointer;
 }
 
+.schedule-content-wrap {
+  display: flex; height: auto;
+}
+.schedule-info-content {
+  margin-top: 65px; height: 250px; overflow-y: scroll; overflow-x: hidden; width: 100%;
+}
 
+#schedule-info-wrap {
+  width:400px; height: 100%;  margin-right: auto; margin-left: auto;
+}
+
+#schedule-label {
+  font-size: 22px; margin-left:auto; margin-right:auto; text-align: center; letter-spacing: 5px; margin-top: -7px; width:300px;
+}
+
+@media(max-width: 900px) {
+  .schedule-content-wrap {
+    display: block; height: auto;
+  }
+  .schedule-content {
+    padding: 0;
+  }
+  .calendar-wrap {
+    margin: 30px auto;
+  }
+  .schedule-info-content {
+    height: auto;
+    overflow: hidden;
+  }
+  #schedule-info-wrap {
+    margin-top: 60px;
+    margin-bottom: 50px;
+    width:100%;
+  }
+
+  #schedule-label {
+    width: 80%;
+  }
+  .schedule-content {
+    overflow-x: hidden;
+  }
+
+}
 
 footer {
   display: flex;
@@ -1065,6 +1109,10 @@ footer {
 }
 
 .unchecked {
+}
+
+.fadeInUp {
+  animation: fadeInUp 0.7s forwards;
 }
 
 .fadeInLeft {
@@ -1132,6 +1180,19 @@ footer {
     transform: translate3d(0, 0, 0);
   }
 }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
 
 @keyframes fadeInLeft {
   from {
@@ -1160,6 +1221,41 @@ footer {
     transform: translate3d(0, 0, 0);
   }
 }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation: fadeIn 0.7s forwards;
+  animation: fadeIn 0.7s forwards;
+}
+
+
 
 @keyframes fadeOutRight {
   from {
