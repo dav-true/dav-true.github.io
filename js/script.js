@@ -353,7 +353,7 @@ $('document').ready(function () {
             cinemaID = $(this).index('.schedule-button')
 
             $('.schedule-wrap').css('display', 'block');
-            $('.schedule-wrap').fadeTo(300, 1)
+            $('.schedule-wrap').fadeTo(200, 1)
             getDaySchedule(c_day, cinemaID)
             $('#schedule-label').html('Schedule on the ' + c_day + "<sup>th</sup> of " + monthNames[c_month])
 
@@ -526,7 +526,7 @@ $('document').ready(function () {
 
     $('.close-modal-butt').click(() => {
 
-        $('.modal-div').fadeTo(300, 0).delay(300).queue(function (next) {
+        $('.modal-div').fadeTo(200, 0).delay(200).queue(function (next) {
             $(this).css('display', 'none');
             next();
         });
@@ -536,7 +536,7 @@ $('document').ready(function () {
 
         target.attr('src', '');
 
-        $('.schedule-wrap').fadeTo(300, 0).delay(300).queue(function (next) {
+        $('.schedule-wrap').fadeTo(200, 0).delay(200).queue(function (next) {
             $(this).css('display', 'none');
             next();
         });
@@ -548,7 +548,7 @@ $('document').ready(function () {
     window.onclick = function (event) {  ///////////////////////////// Modal div closing by clicking ourside the block
         if (event.target == modal) {
             $('body').css('overflow-y', 'scroll')
-            $('.modal-div').fadeTo(300, 0).delay(300).queue(function (next) {
+            $('.modal-div').fadeTo(200, 0).delay(300).queue(function (next) {
                 $(this).css('display', 'none');
                 next();
             });
@@ -561,7 +561,7 @@ $('document').ready(function () {
         }
         if (event.target == $('.schedule-wrap')[0]) {
             $('body').css('overflow-y', 'scroll')
-            $('.schedule-wrap').fadeTo(300, 0).delay(300).queue(function (next) {
+            $('.schedule-wrap').fadeTo(200, 0).delay(300).queue(function (next) {
                 $(this).css('display', 'none');
                 next();
             });
@@ -661,7 +661,7 @@ $('document').ready(function () {
         $('.description').text(data.movies[id].description);
 
         $('.modal-div').css('display', 'block');
-        $('.modal-div').fadeTo(400, 1)
+        $('.modal-div').fadeTo(200, 1)
 
     })
 
