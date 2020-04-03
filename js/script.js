@@ -269,7 +269,7 @@ $('document').ready(function () {
             }
 
         }
-        
+
 
         $('#cal-left-switcher').click(function () {
             if (c_month > 0) {
@@ -308,7 +308,7 @@ $('document').ready(function () {
                             day_counter++;
                         }
                     }
-                    
+
                     if (day_counter > 0) {
                         controller++
                         var htmlstring = "";
@@ -324,21 +324,21 @@ $('document').ready(function () {
                             `
                             $('.schedule-info-table').html(htmlstring);
                         }
-                        
-                    } 
+
+                    }
                 }
-            } 
-            if(controller == 0) {
+            }
+            if (controller == 0) {
                 $('.schedule-info-table').html('<p style="width:350px;font-size:20px; text-align:center;">There is no movie on your date yet</p>\
-                                                <p style="width:350px;font-size:20px; text-align:center;">Come back later!</p>')    
-                        
-            } 
-            
-            
+                                                <p style="width:350px;font-size:20px; text-align:center;">Come back later!</p>')
+
+            }
+
+
         }
 
 
-        
+
 
         $('.schedule-button').click(function () {
             $('.schedule-info-table').html('<p style="width:350px;font-size:20px; text-align:center;">There is no movie on your date yet</p>\
@@ -348,15 +348,16 @@ $('document').ready(function () {
             c_month = c_date.getMonth();
             c_day = c_date.getDate();
             currentMonthDisplay();
+            $('#go-up-arrow').css("display", "none")
             $('body').css('overflow-y', 'hidden')
             cinemaID = $(this).index('.schedule-button')
-            console.log(cinemaID)
+
             $('.schedule-wrap').css('display', 'block');
             $('.schedule-wrap').fadeTo(300, 1)
             getDaySchedule(c_day, cinemaID)
             $('#schedule-label').html('Schedule on the ' + c_day + "<sup>th</sup> of " + monthNames[c_month])
 
-            
+
 
         })
 
@@ -387,7 +388,7 @@ $('document').ready(function () {
         if (res.ok) {
             console.log("ok");
         } else {
-            console.log("ga");
+            console.log("not_ok");
         }
         return res.json();
     }
@@ -464,10 +465,10 @@ $('document').ready(function () {
     var heller = 0;
     $('.day-of-week-num').mouseenter(function () {
         this.style.border = '2px solid rgb(246, 208, 162)'
-        
+
     })
 
-    
+
     $('.day-of-week-num').click(function () {
         for (j = 0; j < $('.day-of-week-num').length; j++) {
             if ($('.day-of-week-num').eq(j).text() != '') {
@@ -479,17 +480,16 @@ $('document').ready(function () {
         }
         heller = $(this).index('.day-of-week-num')
         this.style.border = '2px solid rgb(246, 208, 162)'
-        
+
     })
 
 
     $('.day-of-week-num').mouseleave(function () {
-            console.log($(this).index('.day-of-week-num'))
-            if($(this).index('.day-of-week-num') == heller) {
-                this.style.border = '2px solid rgb(246, 208, 162)'
-            } else {
-                this.style.border = '2px solid rgb(253, 241, 227)'
-            }
+        if ($(this).index('.day-of-week-num') == heller) {
+            this.style.border = '2px solid rgb(246, 208, 162)'
+        } else {
+            this.style.border = '2px solid rgb(253, 241, 227)'
+        }
 
     })
 
@@ -524,7 +524,8 @@ $('document').ready(function () {
         $('.mark::after').eq(i).fadeTo(300, 0)
     })
 
-    $('#close-modal-butt').click(() => {
+    $('.close-modal-butt').click(() => {
+
         $('.modal-div').fadeTo(300, 0).delay(300).queue(function (next) {
             $(this).css('display', 'none');
             next();
@@ -534,6 +535,12 @@ $('document').ready(function () {
         let target = $('#trailer-iframe');
 
         target.attr('src', '');
+
+        $('.schedule-wrap').fadeTo(300, 0).delay(300).queue(function (next) {
+            $(this).css('display', 'none');
+            next();
+        });
+        $('body').css('overflow-y', 'scroll')
 
     })
 
@@ -613,10 +620,28 @@ $('document').ready(function () {
         screenWidth();
     })
 
+    var y;
+    $(window).scroll(function() {
+            y = window.pageYOffset;
+            if(y > 300) {
+            $("#go-up-arrow").css("display", "block")
+            } else {
+                $("#go-up-arrow").css("display", "none")
+            }
+ 
+    })
+
+    $("#go-up-arrow").click(function () {
+        $('html, body').stop().animate({
+            scrollTop: $("header").offset().top
+        }, y/10)
+    })
+    
+
     screenWidth();
 
     $('.centered').click(async function () {             //////////////////////// Poster name clicking function
-
+        $('#go-up-arrow').css("display", "none")
         $('body').css('overflow-y', 'hidden')
 
         var id = $(this).attr('data-jsonid');
